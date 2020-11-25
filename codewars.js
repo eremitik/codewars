@@ -95,7 +95,6 @@ function multiTable(number){
   items += (`10 * ${number} = ${temp[10]}`)   //this is to remove the last \n
   return items
 }
-console.log(multiTable(5))
 
 //improved version
 function multiTableImproved(number){
@@ -105,4 +104,72 @@ function multiTableImproved(number){
   }
   return items.slice(0, -1)   //this removes the last \n at the end!!
 }
-console.log(multiTableImproved(5));
+
+
+
+//Complementary DNA (7 kyu)
+function DNAStrand(dna){
+  var str = ''
+  for (var i=0; i<dna.length; i++){
+    dna.charAt(i) == 'A' ? str += 'T' : 
+    dna.charAt(i) == 'T' ? str += 'A' : 
+    dna.charAt(i) == 'C' ? str += 'G' : 
+    dna.charAt(i) == 'G' ? str += 'C' : ''
+  }
+  return str
+}
+
+
+
+//Array plus array (8 kyu)
+function arrayPlusArray(arr1, arr2) {
+  var sum = 0
+  for (i in arr1)
+    sum += arr1[i]
+  for (j in arr2)
+    sum += arr2[j]
+  return sum
+}
+
+
+
+//Returning Strings (8 kyu)
+function greet(name){
+  return `Hello, ${name} how are you doing today?`
+}
+
+
+
+//Filling an array (part 1) (8 kyu)
+function arr(n){
+  var array = [];
+  for (i=0; i<n; i++){
+    array.push(i)
+  }
+  return array
+}
+
+
+
+//N-th Power (8 kyu)
+function index(array, n){
+  return n<array.length ? array[n]**n : -1
+}
+
+
+
+//A wolf in sheep's clothing (8 kyu)
+function warnTheSheep(queue){
+  var wolf = queue.indexOf('wolf')
+  return queue[wolf+1]=='sheep' ? 
+  `Oi! Sheep number ${(queue.length)-(wolf+1)}! You are about to be eaten by a wolf!` : 
+  `Pls go away and stop eating my sheep`
+ }
+
+
+
+//Beginner Series #2 Clock (8 kyu)
+function past(h,m,s){
+  return mili = h*3600000 + m*60000 + s*1000
+
+

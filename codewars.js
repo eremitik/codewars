@@ -173,3 +173,20 @@ function past(h,m,s){
   return mili = h*3600000 + m*60000 + s*1000
 
 
+
+//Larger Product or Sum (7 kyu)
+function sumOrProduct(array, n){
+  var sorted = array.sort(function(a,b){return b-a}).reverse();
+  var product = 1;
+  var sum = 0;
+
+  for (i=0; i<=n-1; i++){
+    product *= sorted[i]
+  }
+
+  for (j=sorted.length-1; j>=sorted.length-n; j--){
+    sum += sorted[j]
+  }
+
+  return sum===product ? 'same' : sum>product ? 'sum' : 'product'
+}

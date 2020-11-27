@@ -190,3 +190,33 @@ function sumOrProduct(array, n){
 
   return sum===product ? 'same' : sum>product ? 'sum' : 'product'
 }
+
+
+  
+//You Can't Code Under Pressure #1 (8 kyu)
+function doubleInteger(i) {
+  return i*2
+}
+
+
+
+//Are You Playing Banjo? (8 kyu)
+function areYouPlayingBanjo(name) {
+  return name[0] === 'r' || name[0] === 'R' ? `${name} plays banjo` : `${name} does not play banjo`
+}
+
+
+
+//Prime Numbers (6 kyu) - my solution works, but times out. Have to reattempt. 
+// function isPrime(num) {
+//   if (num === 0 || num === 1 || num < 0){
+//     return false
+//   } else {
+//     for (var i=2; i<num; i++){
+//       if (num%i===0){
+//         return false
+//       }
+//     }
+//   }
+//   return true
+// }

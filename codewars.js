@@ -233,3 +233,13 @@ function modifiedSum(a, n) {
   }
   return calc-sum
 }
+
+
+
+//How many consecutive numbers are needed?
+function consecutive(arr){
+  arr = arr.sort(function(a,b){return a-b})
+  diff = arr[arr.length-1] - arr[0]
+  console.log(diff)
+  return diff > arr.length ? diff+1-arr.length : 0
+}

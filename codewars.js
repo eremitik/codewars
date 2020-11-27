@@ -220,3 +220,16 @@ function areYouPlayingBanjo(name) {
 //   }
 //   return true
 // }
+
+
+
+//Nth power rules them all!
+function modifiedSum(a, n) {
+  var calc = 0
+  var sum = 0
+  for (i=0; i<a.length; i++){
+    calc += a[i]**n
+    sum += a[i]
+  }
+  return calc-sum
+}

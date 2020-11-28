@@ -284,7 +284,7 @@ function adjacentElementsProduct(array) {
 
 
 
-//Invert values
+//Invert values (8 kyu)
 function invert(array) {
   var newArr = [];
   for (i=0; i<array.length; i++){
@@ -295,7 +295,7 @@ function invert(array) {
 
 
 
-//Generate range of integers
+//Generate range of integers (8 kyu)
 function generateRange(min, max, step){
     var newArr = []
     for (i=min; i<max; i+=step){

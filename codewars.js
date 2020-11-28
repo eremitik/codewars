@@ -292,3 +292,24 @@ function invert(array) {
   }
   return newArr 
 }
+
+
+
+//Generate range of integers
+function generateRange(min, max, step){
+    var newArr = []
+    for (i=min; i<max; i+=step){
+      newArr.push(i)
+    }
+    newArr[newArr.length-1]+step<=max ? newArr.push(max) : ''
+    return newArr
+}
+
+//better version
+function generateRange(min, max, step){
+    var newArr = []
+    for (i=min; i<=max; i+=step){
+      newArr.push(i)
+    }
+    return newArr
+}

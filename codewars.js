@@ -281,3 +281,14 @@ function adjacentElementsProduct(array) {
   }
   return b
 }
+
+
+
+//Invert values
+function invert(array) {
+  var newArr = [];
+  for (i=0; i<array.length; i++){
+    newArr.push(array[i]*-1)
+  }
+  return newArr 
+}

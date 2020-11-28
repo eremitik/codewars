@@ -192,7 +192,7 @@ function sumOrProduct(array, n){
 }
 
 
-  
+
 //You Can't Code Under Pressure #1 (8 kyu)
 function doubleInteger(i) {
   return i*2
@@ -204,6 +204,7 @@ function doubleInteger(i) {
 function areYouPlayingBanjo(name) {
   return name[0] === 'r' || name[0] === 'R' ? `${name} plays banjo` : `${name} does not play banjo`
 }
+
 
 
 
@@ -242,4 +243,41 @@ function consecutive(arr){
   diff = arr[arr.length-1] - arr[0]
   console.log(diff)
   return diff > arr.length ? diff+1-arr.length : 0
+}
+
+
+
+//Row Weights (7 kyu)
+function rowWeights(array){
+  var sum1 = 0
+  var sum2 = 0
+  var newArray = []
+  for (i=0; i<array.length; i+=2)
+    sum1 += array[i]
+    newArray.push(sum1)
+
+  for (j=1; j<array.length; j+=2)
+    sum2 += array[j]
+    newArray.push(sum2)
+
+  return newArray
+}
+
+var array = [50, 60, 70, 80]
+console.log(rowWeights(array));
+
+
+
+//Maximum Product (7 kyu)
+function adjacentElementsProduct(array) {
+  var a = array[0]*array[1]
+  var b = a
+
+  for (i=0; i<array.length; i++){
+    var a = array[i]*array[i+1]
+    if (a>b){
+      b=a;
+    }
+  }
+  return b
 }

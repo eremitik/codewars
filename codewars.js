@@ -313,3 +313,62 @@ function generateRange(min, max, step){
     }
     return newArr
 }
+
+
+
+//Grasshoper-Summation (8 kyu)
+var summation = function (num) {
+  var sum = 0
+  for (i=0; i<=num; i++){
+    sum += i
+  }
+  return sum
+}
+
+
+
+//Is he gonna survive?
+function hero(bullets, dragons){
+  if (bullets/2 >= dragons){
+    return true
+  }
+  return false
+}
+
+
+
+//Can we divide it?
+function isDivideBy(number, a, b) {
+  return number%a===0 && number%b===0
+}
+
+
+
+//The falling speed of petals
+function sakuraFall(v) {
+  return v>0 ? 400/v : 0
+}
+
+
+
+//Hello,Name or World!
+function hello(name) {
+  if (name== 'undefined' || name == null || name == ''){
+    return 'Hello, World!'
+  } else {
+  name = name.toLowerCase()
+  name = name.charAt(0).toUpperCase() + name.slice(1)
+  return `Hello, ${name}!`
+  }
+}
+
+
+
+//Beginner Series #4 Cockroach
+function cockroachSpeed(s) {
+  return Math.floor(s*27.78)
+}
+
+
+
+//

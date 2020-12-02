@@ -371,4 +371,103 @@ function cockroachSpeed(s) {
 
 
 
-//
+//Grasshopper-If/else syntax debug
+function checkAlive (health) {
+  if (health <= 0) {
+    return false
+  } else {
+    return true
+  }
+}
+
+
+
+//Reversed sequence
+function reverseSeq (n){
+  var newArr = [];
+  for (i=n; i>=1; i--){
+    newArr.push(i)
+  }
+  return newArr
+}
+
+
+
+//Find the first non-consecutive number
+function firstNonConsecutive (arr) {
+  var newArr = []
+  var position = 0
+  for (i=0; i<arr.length-1; i++){
+    newArr.push(arr[i+1]-arr[i])
+  }
+  position = newArr.indexOf(newArr.find(num => num > 1))
+  
+  if (arr[position+1] === arr[0]){
+    return null
+  } else
+  return arr[position+1]
+  }
+
+
+
+//Grasshopper - Function syntax debugging
+function main (verb, noun){
+  return `${verb} ${noun}`
+}
+
+
+
+//Grasshopper-Debug sayHello
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+
+
+
+
+//Holiday VI-Shark Pontoon
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  dolphin ? sharkSpeed=sharkSpeed/2 : ''
+  return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? 'Alive!' : 'Shark Bait!'
+}
+
+
+
+//Grasshopper - Debug
+function weatherInfo(temp){
+  var c = (temp-32)*(5/9)
+  return c > 0 ? `${c} is above freezing temperature` : `${c} is freezing temperature`
+}
+
+
+
+//Capitalization and Mutability
+function capitalizeWord(word) {
+  word = word.toLowerCase();
+  word = word.charAt(0).toUpperCase() + word.slice(1);
+  return word;
+}
+
+
+
+//Grasshopper - Messi Goals
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+
+
+//Area or Perimeter
+const areaOrPerimeter = function(l , w) {
+  return l===w ? l*w : (l*2)+(w*2)
+};
+
+
+
+//Maximum Multiple
+function maxMultiple(divisor, bound){
+  let n = Math.floor(bound/divisor)
+  return n *= divisor
+}

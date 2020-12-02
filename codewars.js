@@ -471,3 +471,18 @@ function maxMultiple(divisor, bound){
   let n = Math.floor(bound/divisor)
   return n *= divisor
 }
+
+
+
+//Jumping Number (Special Numbers Series #4) (7 kyu)
+function jumpingNumber(n){
+  if (n.toString().length === 1){
+    return 'Jumping!!'
+  }
+  for(i=0; i<n.toString().length-1; i++){
+    if (Math.abs(n.toString().charAt(i+1) - n.toString().charAt(i)) !== 1){
+      return 'Not!!'
+    }
+  }
+  return "Jumping!!"
+}

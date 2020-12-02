@@ -327,7 +327,7 @@ var summation = function (num) {
 
 
 
-//Is he gonna survive?
+//Is he gonna survive? (8 kyu)
 function hero(bullets, dragons){
   if (bullets/2 >= dragons){
     return true
@@ -337,21 +337,21 @@ function hero(bullets, dragons){
 
 
 
-//Can we divide it?
+//Can we divide it? (8 kyu)
 function isDivideBy(number, a, b) {
   return number%a===0 && number%b===0
 }
 
 
 
-//The falling speed of petals
+//The falling speed of petals (8 kyu)
 function sakuraFall(v) {
   return v>0 ? 400/v : 0
 }
 
 
 
-//Hello,Name or World!
+//Hello,Name or World! (8 kyu)
 function hello(name) {
   if (name== 'undefined' || name == null || name == ''){
     return 'Hello, World!'
@@ -364,14 +364,14 @@ function hello(name) {
 
 
 
-//Beginner Series #4 Cockroach
+//Beginner Series #4 Cockroach (8 kyu)
 function cockroachSpeed(s) {
   return Math.floor(s*27.78)
 }
 
 
 
-//Grasshopper-If/else syntax debug
+//Grasshopper-If/else syntax debug (8 kyu)
 function checkAlive (health) {
   if (health <= 0) {
     return false
@@ -382,7 +382,7 @@ function checkAlive (health) {
 
 
 
-//Reversed sequence
+//Reversed sequence (8 kyu)
 function reverseSeq (n){
   var newArr = [];
   for (i=n; i>=1; i--){
@@ -393,7 +393,7 @@ function reverseSeq (n){
 
 
 
-//Find the first non-consecutive number
+//Find the first non-consecutive number (8 kyu)
 function firstNonConsecutive (arr) {
   var newArr = []
   var position = 0
@@ -410,14 +410,14 @@ function firstNonConsecutive (arr) {
 
 
 
-//Grasshopper - Function syntax debugging
+//Grasshopper - Function syntax debugging (8 kyu)
 function main (verb, noun){
   return `${verb} ${noun}`
 }
 
 
 
-//Grasshopper-Debug sayHello
+//Grasshopper-Debug sayHello (8 kyu)
 function sayHello(name) {
   return `Hello, ${name}`
 }
@@ -425,7 +425,7 @@ function sayHello(name) {
 
 
 
-//Holiday VI-Shark Pontoon
+//Holiday VI-Shark Pontoon (8 kyu)
 function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
   dolphin ? sharkSpeed=sharkSpeed/2 : ''
   return pontoonDistance/youSpeed < sharkDistance/sharkSpeed ? 'Alive!' : 'Shark Bait!'
@@ -433,7 +433,7 @@ function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 
 
 
-//Grasshopper - Debug
+//Grasshopper - Debug (8 kyu)
 function weatherInfo(temp){
   var c = (temp-32)*(5/9)
   return c > 0 ? `${c} is above freezing temperature` : `${c} is freezing temperature`
@@ -441,7 +441,7 @@ function weatherInfo(temp){
 
 
 
-//Capitalization and Mutability
+//Capitalization and Mutability (8 kyu)
 function capitalizeWord(word) {
   word = word.toLowerCase();
   word = word.charAt(0).toUpperCase() + word.slice(1);
@@ -450,7 +450,7 @@ function capitalizeWord(word) {
 
 
 
-//Grasshopper - Messi Goals
+//Grasshopper - Messi Goals (8 kyu)
 var laLigaGoals = 43
 var championsLeagueGoals = 10
 var copaDelReyGoals = 5
@@ -459,14 +459,14 @@ var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
 
 
 
-//Area or Perimeter
+//Area or Perimeter (8 kyu)
 const areaOrPerimeter = function(l , w) {
   return l===w ? l*w : (l*2)+(w*2)
 };
 
 
 
-//Maximum Multiple
+//Maximum Multiple (7 kyu)
 function maxMultiple(divisor, bound){
   let n = Math.floor(bound/divisor)
   return n *= divisor

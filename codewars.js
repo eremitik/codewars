@@ -476,13 +476,74 @@ function maxMultiple(divisor, bound){
 
 //Jumping Number (Special Numbers Series #4) (7 kyu)
 function jumpingNumber(n){
-  if (n.toString().length === 1){
-    return 'Jumping!!'
-  }
   for(i=0; i<n.toString().length-1; i++){
     if (Math.abs(n.toString().charAt(i+1) - n.toString().charAt(i)) !== 1){
       return 'Not!!'
     }
   }
   return "Jumping!!"
+}
+
+
+
+//Training JS #5: Basic data types--Object (8 kyu)
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+
+
+//Welcome! (8 kyu)
+var db = {
+  english: 'Welcome',
+  czech: 'Vitejte',
+  danish: 'Velkomst',
+  dutch: 'Welkom',
+  estonian: 'Tere tulemast',
+  finnish: 'Tervetuloa',
+  flemish: 'Welgekomen',
+  french: 'Bienvenue',
+  german: 'Willkommen',
+  irish: 'Failte',
+  italian: 'Benvenuto',
+  latvian: 'Gaidits',
+  lithuanian: 'Laukiamas',
+  polish: 'Witamy',
+  spanish: 'Bienvenido',
+  swedish: 'Valkommen',
+  welsh: 'Croeso'
+}
+
+
+function greet(language) {
+  return db[language] ? db[language] : 'Welcome'
+  }
+
+
+
+//Testing 1-2-3 (7 kyu)
+var number=function(array){
+  var newArr = [];
+  for (i=0; i<array.length; i++){
+    newArr.push(`${i+1}: ${array[i]}`)
+  }
+  return newArr
+}
+
+
+
+//Make a function that does arithmetic! (7 kyu)
+function arithmetic(a, b, operator){
+  return operator === 'add' ? a+b : operator === 'subtract' ? a-b : operator === 'multiply' ? a*b : a/b
+}
+
+
+
+//Who is the killer? (7 kyu)
+function killer(suspectInfo, dead) {
+  for (let key in suspectInfo)
+    for (let name in suspectInfo[key])
+    if (dead[0] === suspectInfo[key][name] || dead[1] === suspectInfo[key][name]){
+      return key
+    }
 }

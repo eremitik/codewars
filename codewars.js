@@ -548,13 +548,21 @@ function killer(suspectInfo, dead) {
     }
 }
 
+//alternate solution
+function killer(suspectInfo, dead) {
+  for (let key in suspectInfo)
+    for (i=0; i<suspectInfo[key].length; i++)
+      for (j=0; j<dead.length; j++)
+        if (suspectInfo[key][i] === dead[j])
+          return key
+}
+
 
 
 //Check the exam (8 kyu)
 function checkExam(array1, array2) {
   var tally = 0
   for (i=0; i<array1.length; i++){
-    console.log(array1[i])
     array1[i] === array2[i] ? tally += 4 : array2[i] === "" ? tally += 0 : tally -= 1
   }
   return tally<0 ? 0 : tally
@@ -562,7 +570,7 @@ function checkExam(array1, array2) {
 
 
 
-//Valid spacing
+//Valid spacing (7 kyu)
 function validSpacing(s) {
   var broken = 0
   s.charAt(0) === " " ? broken += 1 : s.charAt(s.length-1) === " " ? broken += 1 : broken += 0
@@ -572,3 +580,24 @@ function validSpacing(s) {
   }
   return broken>=1 ? false : true
 }
+
+
+
+//Dominant array elements (7 kyu)
+function solve(arr){
+  newArr = []
+  for (i=0; i<arr.length; i++){
+    var highest = arr[i]
+    for (j=i+1; j<arr.length; j++){
+    if (highest < arr[j]){
+      highest = arr[j]
+      i = j
+      }
+    }
+    newArr.push(highest)
+    for (k=0; k<newArr.length; k++){
+    }
+  }
+  newArr = [...new Set(newArr)]
+  return newArr
+};

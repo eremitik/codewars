@@ -601,3 +601,60 @@ function solve(arr){
   newArr = [...new Set(newArr)]
   return newArr
 };
+
+//alternative
+function solve(arr){
+  let result=[arr[arr.length-1]];
+  console.log(result)
+  for (let i=arr.length-2; i>=0; --i){
+    if (arr[i]>result[0]){
+      result.unshift(arr[i]);
+    }
+   }
+  return result;
+ };
+
+
+
+ //Special Number (Special Number Series #5) (7 kyu)
+function specialNumber(n){
+  if (n.toString().length>1){
+    for(i=0; i<n.toString().length; i++){
+      if(n.toString().charAt(i) === '6' || 
+        n.toString().charAt(i) === '7' || 
+        n.toString().charAt(i) === '8' || 
+        n.toString().charAt(i) === '9')
+        return "NOT!!"
+    }
+  } else if (n===6 || n===7 || n===8 || n===9){
+      return "NOT!!"
+  }
+  return "Special!!"
+}
+
+
+
+//Will there be enough space? (8 kyu)
+function enough(cap, on, wait) {
+  return cap>=on+wait ? 0 : on+wait-cap
+}
+
+
+
+//Switch it Up!
+function switchItUp(n){
+  let dict = {
+    '0': 'Zero',
+    '1': 'One',
+    '2': 'Two',
+    '3': 'Three',
+    '4': 'Four',
+    '5': 'Five',
+    '6': 'Six',
+    '7': 'Seven',
+    '8': 'Eight',
+    '9': 'Nine'
+  }
+
+  return dict[n]
+}

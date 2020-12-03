@@ -547,3 +547,28 @@ function killer(suspectInfo, dead) {
       return key
     }
 }
+
+
+
+//Check the exam (8 kyu)
+function checkExam(array1, array2) {
+  var tally = 0
+  for (i=0; i<array1.length; i++){
+    console.log(array1[i])
+    array1[i] === array2[i] ? tally += 4 : array2[i] === "" ? tally += 0 : tally -= 1
+  }
+  return tally<0 ? 0 : tally
+}
+
+
+
+//Valid spacing
+function validSpacing(s) {
+  var broken = 0
+  s.charAt(0) === " " ? broken += 1 : s.charAt(s.length-1) === " " ? broken += 1 : broken += 0
+
+  for (i=0; i<s.length; i++){
+    (s.charAt(i) + s.charAt(i+1) ) === "  " ? broken += 1 : broken += 0
+  }
+  return broken>=1 ? false : true
+}

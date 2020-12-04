@@ -604,15 +604,14 @@ function solve(arr){
 
 //alternative
 function solve(arr){
-  let result=[arr[arr.length-1]];
-  console.log(result)
-  for (let i=arr.length-2; i>=0; --i){
-    if (arr[i]>result[0]){
-      result.unshift(arr[i]);
-    }
-   }
-  return result;
- };
+  let newArr = [arr[arr.length-1]]
+  for (i=arr.length; i>=0; i--){
+      if (arr[i]>newArr[0]){
+        newArr.unshift(arr[i])
+      }
+  }
+  return newArr
+};
 
 
 
@@ -694,4 +693,19 @@ function replaceAll(seq, find, replace) {
       }
   }
   return typeof seq[0]==='string' ? newStr : newArr
+}
+
+
+
+//Vowel Count (7 kyu)
+function getCount(str) {
+  var vowelsCount = 0;
+  var vowels = ['a', 'e', 'i', 'o', 'u']
+  for (i=0; i<str.length; i++){
+    var control = str.charAt(i)
+    for (j=0; j<vowels.length; j++){
+      control===vowels[j] ? vowelsCount += 1 : vowelsCount += 0
+    }
+  }
+  return vowelsCount;
 }

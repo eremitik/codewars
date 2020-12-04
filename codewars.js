@@ -709,3 +709,27 @@ function getCount(str) {
   }
   return vowelsCount;
 }
+
+
+
+//Mumbling (7 kyu)
+function accum(s) {
+  let newArrA = []
+  let newArrB = []
+  for (i=0; i<s.length; i++){
+    newArrA.push(s.charAt(i).toLowerCase().repeat(i+1))
+      }
+  for (j=0; j<newArrA.length; j++){
+    newArrB.push(newArrA[j].charAt(0).toUpperCase() + newArrA[j].slice(1))
+  }
+  return newArrB.join('-')
+}
+
+//better version
+function accum(s){
+  let newArr = []
+  for (i=0; i<s.length; i++){
+    newArr.push(s.charAt(i).toUpperCase() + s.charAt(i).toLowerCase().repeat(i))
+  }
+  return newArr.join('-')
+}

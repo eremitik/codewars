@@ -658,3 +658,40 @@ function switchItUp(n){
 
   return dict[n]
 }
+
+
+
+//Parse float (8 kyu)
+function parseF(s) {
+  let a = parseFloat(s)
+  return a===undefined || isNaN(a)===true ? null : parseFloat(s)
+}
+
+
+
+//String repeat (8 kyu)
+function repeatStr (n, s) {
+  let word = ''
+  for (i=1; i<=n; i++){
+    word += s
+  }
+  return word
+}
+
+
+
+//Replace all items
+function replaceAll(seq, find, replace) {
+  var newArr = []
+  var newStr = '' 
+  if (typeof seq[0]==='string'){
+    for (j=0; j<seq.length; j++){
+      seq.charAt(j)===find ? newStr += replace : newStr += seq.charAt(j)
+      }
+  } else {
+    for (i=0; i<seq.length; i++){
+      seq[i]===find ? newArr.push(replace) : newArr.push(seq[i])
+      }
+  }
+  return typeof seq[0]==='string' ? newStr : newArr
+}

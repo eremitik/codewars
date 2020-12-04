@@ -733,3 +733,14 @@ function accum(s){
   }
   return newArr.join('-')
 }
+
+
+
+//Highest and Lowest
+function highAndLow(numbers){
+  var newArr = numbers.split(' ').map(Number) //don't fully understand this yet
+  newArr.sort(function(a,b){return a-b})
+  var str = ''
+  str += newArr[newArr.length-1] + ' ' + newArr[0]
+    return str
+}

@@ -855,3 +855,54 @@ function findShort(s){
 function isSquare(n){
   return parseInt(Math.sqrt(n),10)===(Math.sqrt(n)) ? true : false
 }
+
+
+
+//Exes and Ohs (7 kyu)
+function XO(str) {
+    let xcount = 0
+    let ocount = 0
+    for (i=0; i<str.length; i++){
+      str.toLowerCase().charAt(i)==='x' ? xcount+=1 : str.toLowerCase().charAt(i)==='o' ? ocount+=1 : ''
+    }
+    return xcount===ocount
+}
+
+
+
+//Beginner Series #3 Sum of Numbers (7 kyu)
+function getSum( a,b ){
+  var tally = 0
+  if (a<b){
+    for(i=a; i<=b; i++){
+      tally += i
+      }
+    } else if (b<a) {
+      for (j=b; j<=a; j++){
+        tally += j
+        }
+    }
+  return a===b?a:tally
+}
+
+
+
+//Growth of a Population (7 kyu)
+function nbYear(p0, percent, aug, p) {
+  for (i=0; p0<p; i++){
+    p0 += (p0*(percent/100))+aug
+    console.log(p0)
+  }
+  return i
+}
+
+
+
+//List Filtering (7 kyu)
+function filter_list(l) {
+  let newArr = []
+  for(i=0; i<l.length; i++){
+    typeof l[i]==='number' ? newArr.push(l[i]) : ''
+  }
+  return newArr
+}

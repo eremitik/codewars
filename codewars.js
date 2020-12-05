@@ -772,3 +772,86 @@ function getMiddle(s){
   var n = s.length
   return n%2===0 ? s.charAt((n/2)-1) + s.charAt(n/2) : s.charAt(n/2)
 }
+
+
+
+//Opposite number (8 kyu)
+function opposite(n) {
+  return n*-1
+}
+
+
+
+//Remove First and Last Character (8 kyu)
+function removeChar(str){
+  var newStr = ''
+  for(i=1; i<str.length-1; i++){
+    newStr += str.charAt(i)
+  }
+  return newStr
+};
+
+
+
+//Descending Order (7 kyu)
+function descendingOrder(n){
+  var newArr = []
+  var newNum = 0
+  for (i=0; i<=n.toString().length; i++){
+    newArr.push(n.toString().charAt(i))
+  }
+  newArr = newArr.sort(function(a,b){return b-a})
+  newNum = newArr.join('')
+  return parseInt(newNum)
+}
+
+
+
+//Return Negative (8 kyu)
+function makeNegative(n) {
+  return n<0 ? n : n*-1
+}
+
+
+
+//Remove String Spaces
+function noSpace(x){
+  let newStr = ''
+  for (i=0; i<x.length; i++){
+    x.charAt(i) === ' ' ? '' : newStr += x.charAt(i)
+  }
+  return newStr
+}
+
+
+
+//Square Every Digit (7 kyu)
+function squareDigits(num){
+  let newArr = []
+  for (i=0; i<num.toString().length; i++){
+    newArr.push(num.toString().charAt(i)*num.toString().charAt(i))
+  }
+  return parseInt(newArr.join(''))
+}
+
+
+
+//Convert boolean values to strings 'Yes' or 'No' (8 kyu)
+function boolToWord( bool ){
+  return bool ? 'Yes' : 'No'
+}
+
+
+
+//Shortest Word (7 kyu)
+function findShort(s){
+  let words = s.split(' ').sort(function(a,b){return a.length-b.length})
+  return words[0].length
+}
+
+
+
+//You're a square! (7 kyu)
+function isSquare(n){
+  return parseInt(Math.sqrt(n),10)===(Math.sqrt(n)) ? true : false
+}

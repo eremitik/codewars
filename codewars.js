@@ -736,11 +736,39 @@ function accum(s){
 
 
 
-//Highest and Lowest
+//Highest and Lowest (7 kyu)
 function highAndLow(numbers){
   var newArr = numbers.split(' ').map(Number) //don't fully understand this yet
   newArr.sort(function(a,b){return a-b})
   var str = ''
   str += newArr[newArr.length-1] + ' ' + newArr[0]
     return str
+}
+
+
+
+//Even or Odd (8 kyu)
+function even_or_odd(n) {
+  n = Math.abs(n)
+  return n%2===0 ? 'Even' : 'Odd'
+}
+
+
+
+//Sum of positive (8 kyu)
+function positiveSum(arr) {
+  var tally=0
+  for (i=0; i<=arr.length; i++){
+    arr[i]>0?tally+=arr[i]:''
+  } 
+  return tally
+}
+
+
+
+
+//Get the Middle Character (7 kyu)
+function getMiddle(s){
+  var n = s.length
+  return n%2===0 ? s.charAt((n/2)-1) + s.charAt(n/2) : s.charAt(n/2)
 }

@@ -906,3 +906,41 @@ function filter_list(l) {
   }
   return newArr
 }
+
+
+
+//Reversed Strings (8 kyu)
+function solution(str){
+  let newStr = ''
+  for(i=str.length; i>=0; i--){
+    newStr+=str.charAt(i)
+  }
+  return newStr
+}
+
+
+
+//Counting sheep... (8 kyu)
+function countSheeps(arr) {
+  let counter = 0
+  for(i=0; i<arr.length; i++){
+    arr[i]===true ? counter+=1 : ''
+  }
+  return counter
+}
+
+
+
+//Convert a Number to a String! (8 kyu)
+function numberToString(n) {
+  return n.toString()
+}
+
+
+
+//Sum of two lowest positive integers (7 kyu)
+function sumTwoSmallestNumbers(n) {  
+  let foo = n.sort(function(a,b){return a-b})[0]
+  let bar = n.sort(function(a,b){return a-b})[1]
+  return foo + bar
+}

@@ -944,3 +944,30 @@ function sumTwoSmallestNumbers(n) {
   let bar = n.sort(function(a,b){return a-b})[1]
   return foo + bar
 }
+
+
+
+//Find the next perfect square! (7 kyu)
+function findNextSquare(sq) {
+  return Number.isInteger(Math.sqrt(sq)) ? (Math.sqrt(sq)+1)*(Math.sqrt(sq)+1) : -1
+}
+
+
+
+//Century From Year (8 kyu)
+function century(year) {
+  var check = parseInt(year.toString().charAt(0))
+  var length = year.toString().length
+
+  if (length===4) {
+    check = parseInt(year.toString().charAt(0)+year.toString().charAt(1))
+  } else if (length===3) {
+    check = parseInt(year.toString().charAt(0))
+  }
+  return check>=year/100 ? check : Math.floor(year/100)+1
+}
+
+//easier version
+function century(year){
+  return Math.ceil(year/100)
+}

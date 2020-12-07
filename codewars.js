@@ -971,3 +971,36 @@ function century(year) {
 function century(year){
   return Math.ceil(year/100)
 }
+
+
+
+//Is n divisible by x and y? (8 kyu)
+function isDivisible(n, x, y) {
+  return n%x===0 && n%y===0
+}
+
+
+
+//Convert number to reversed array of digits (8 kyu)
+function digitize(n) {
+  var str = n.toString()
+  var newArr = []
+  for (i=0; i<str.length; i++){
+    newArr.unshift(parseInt(str.charAt(i)))
+  }
+  return newArr
+}
+
+
+
+//Basic Mathematical Operations
+function basicOp(op, n1, n2){
+  return op==='+'?n1+n2:op==='-'?n1-n2:op==='*'?n1*n2:n1/n2
+}
+
+
+
+//Conver a String to a Number! (8 kyu)
+var stringToNumber = function(str){
+  return parseInt(str)
+}

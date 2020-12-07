@@ -1004,3 +1004,79 @@ function basicOp(op, n1, n2){
 var stringToNumber = function(str){
   return parseInt(str)
 }
+
+
+
+//Printer Errors (7 kyu)
+function printerError(s) {
+    var denom = s.length
+    var num = 0
+    var dict = ['n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    for (i=0; i<denom; i++){
+      control = s.charAt(i)
+      for (j=0; j<dict.length; j++){
+        control===dict[j]?num+=1:''
+      }
+    }
+    return `${num}/${denom}`
+}
+
+
+
+//Abbreviate a Two Word Name (8 kyu)
+function abbrevName(name){
+  var newName = ''
+  newName = name.split(' ')
+  return `${newName[0].toUpperCase().charAt(0)}.${newName[1].toUpperCase().charAt(0)}`
+}
+
+
+
+//Multiples of 3 or 5 (6 kyu)
+function solution(number){
+  var newArr = []
+  for (i=number-1; i>0; i--){
+    i%3===0 && i%5===0 ? newArr.push(i) : i%3===0 ? newArr.push(i) : i%5===0 ? newArr.push(i) : ''
+  }
+  return newArr.reduce((a,b)=>a+b,0)
+}
+
+
+
+//Find the odd int (6 kyu)
+function findOdd(a) {
+  var list = {}
+  for (i=0; i<a.length; i++){
+    if (!list[a[i]])  //search if value from 'a' is a key in list already
+      list[a[i]]=0    //if not already in list, add property as 'a[i]': 0
+      list[a[i]]++    //add 1 to the value for everytime a[i] shows up
+  }
+  for (key in list){
+    if (list[key]%2!==0){
+      return parseInt(key)
+    }
+  }
+}
+
+
+
+//Categorize New Member (7 kyu)
+function openOrSenior(data){
+  var newArr = []
+  for (i=0; i<data.length; i++){
+    if (data[i][0]>=55 && data[i][1]>7){
+      newArr.push('Senior')
+    } else {
+      newArr.push('Open')
+    }
+  }
+  return newArr
+}
+
+
+
+//Is this a triangle? (7 kyu)
+function isTriangle(a,b,c){
+  return (a+b)>c && (a+c)>b && (b+c)>a ? true : false
+}

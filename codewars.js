@@ -1080,3 +1080,13 @@ function openOrSenior(data){
 function isTriangle(a,b,c){
   return (a+b)>c && (a+c)>b && (b+c)>a ? true : false
 }
+
+
+//A Needle in the Haystack (8 kyu)
+function findNeedle(haystack) {
+  var pos = 0
+  for (i=0; i<haystack.length; i++){
+    haystack[i]==='needle' ? pos=i : ''
+  }
+  return `found the needle at position ${pos}`
+}

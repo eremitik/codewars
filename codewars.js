@@ -1082,6 +1082,7 @@ function isTriangle(a,b,c){
 }
 
 
+
 //A Needle in the Haystack (8 kyu)
 function findNeedle(haystack) {
   var pos = 0
@@ -1090,3 +1091,59 @@ function findNeedle(haystack) {
   }
   return `found the needle at position ${pos}`
 }
+
+
+
+//Friend or Foe? (7 kyu)
+function friend(friends){
+  var newArr = []
+  friends.filter(function(elem){
+    elem.length===4 ? newArr.push(elem) : ''
+  })
+  return newArr
+}
+
+
+
+//Sum of Digits/Digital Root (6 kyu)
+function digital_root(n) {
+  if (n.toString().length===1){
+    return n
+  } else {
+    var newArr = []
+    for(i=0; i<n.toString().length; i++){
+      newArr.push(parseInt(n.toString().charAt(i)))
+      }
+      n = newArr.reduce(function(a,b){
+        return a+b
+      })
+      return digital_root(n)
+    }
+    return n
+}
+
+
+
+//Persistent Bugger. (6 kyu)
+function persistence(n) {
+  var count = 0
+  while (n>9){
+    count++
+    n = n.toString().split('').reduce((a,b)=>a*b)
+  }
+  return count
+}
+
+
+
+//Sum of odd numbers (7 kyu)
+function rowSumOddNumbers(n) {
+  var num = n*n-(n-1)
+  var newArr = []
+  for (i=0; i<n; i++){
+    newArr.push(num+(i*2))
+  }
+  return newArr.reduce((a,b)=>a+b)
+}
+
+console.log(rowSumOddNumbers(4))

@@ -1147,3 +1147,15 @@ function rowSumOddNumbers(n) {
 }
 
 console.log(rowSumOddNumbers(4))
+
+
+
+//Stop gninnipS My sdroW! (6 kyu)
+function spinWords(str){
+  var newArr = str.split(' ')
+  var retArr = []
+  for (var i=0; i<newArr.length; i++){
+    newArr[i].length>=5 ? retArr.push(newArr[i].split('').reverse().join('')) : retArr.push(newArr[i])
+  }
+  return retArr.join(' ')
+}

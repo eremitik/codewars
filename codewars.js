@@ -1187,3 +1187,25 @@ function duplicateCount(text){
 
 
 
+//Find the Parity Outlier (6 kyu)
+function findOutlier(integers){
+  var countEven = []
+  var countOdd = []
+
+  for (i=0; i<integers.length; i++){
+    integers[i]%2===0 ? countEven.push(integers[i]) : countOdd.push(integers[i])
+  }
+  return countEven.length>countOdd.length ? parseInt(countOdd.join(',')) : parseInt(countEven.join(','))
+}
+
+
+
+//Who likes it? (6 kyu)
+function likes(names) {
+  var n = names.length
+  return n===0 ? 'no one likes this' : 
+  n===1 ? `${names[0]} likes this` : 
+  n===2 ? `${names[0]} and ${names[1]} like this` : 
+  n===3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` : 
+  n>3 ? `${names[0]}, ${names[1]} and ${n - 2} others like this` : ''
+}

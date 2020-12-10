@@ -1209,3 +1209,23 @@ function likes(names) {
   n===3 ? `${names[0]}, ${names[1]} and ${names[2]} like this` : 
   n>3 ? `${names[0]}, ${names[1]} and ${n - 2} others like this` : ''
 }
+
+
+
+//Duplicate Encoder (6 kyu)
+function duplicateEncode(word){
+  var str = word.toLowerCase()
+  var newList = {}
+  var newWord = ''
+  for (i=0; i<str.length; i++){
+    if (newList[str.charAt(i)]){
+      newList[str.charAt(i)]++
+    } else {
+      newList[str.charAt(i)] = 1
+    }
+  }
+  for (j=0; j<str.length; j++){
+    newList[str.charAt(j)]===1 ? newWord+='(' : newWord+=')'
+  }
+  return newWord
+}

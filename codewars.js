@@ -1159,3 +1159,31 @@ function spinWords(str){
   }
   return retArr.join(' ')
 }
+
+
+
+//Counting Duplicates (6 kyu) - count duplicate characters in a string or word
+function duplicateCount(text){
+  var str = `${text}`.toLowerCase()
+  var dict = {}
+  var count = 0
+
+  //create list to count each letter
+  for (var i=0; i<str.length; i++){
+    var control = str.charAt(i)
+    if (dict[control]){
+      dict[control]++
+    } else {
+      dict[control] = 1
+    }
+  }
+
+  //count how many are more than 1 occurance
+  for (val in dict){
+    dict[val]>1 ? count++ : ''
+  }
+  return count
+}
+
+
+

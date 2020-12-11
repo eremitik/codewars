@@ -1229,3 +1229,21 @@ function duplicateEncode(word){
   }
   return newWord
 }
+
+
+
+//Take a Ten Minute Walk (6 kyu)
+function isValidWalk(walk) {
+  var norSou = 0
+  var easWes = 0
+  var list = {n: -1,
+              s: 1,
+              e: -1,
+              w: 1}
+
+  for (i=0; i<walk.length; i++){
+    walk[i]==='n' || walk[i]==='s' ? norSou += list[walk[i]] : ''
+    walk[i]==='e' || walk[i]==='w' ? easWes += list[walk[i]] : ''
+  }
+  return walk.length===10 && norSou===0 && easWes===0 ? true : false
+}

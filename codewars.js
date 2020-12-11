@@ -1247,3 +1247,13 @@ function isValidWalk(walk) {
   }
   return walk.length===10 && norSou===0 && easWes===0 ? true : false
 }
+
+
+
+//Array.diff (6 kyu)
+function arrayDiff(a, b) {
+  var newArr = []
+  a.filter(function(i){
+    b.indexOf(i) === -1 ? newArr.push(i) : ''})
+  return newArr
+}

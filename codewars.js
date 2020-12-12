@@ -1257,3 +1257,78 @@ function arrayDiff(a, b) {
     b.indexOf(i) === -1 ? newArr.push(i) : ''})
   return newArr
 }
+
+
+
+//Your order, please (6 kyu)
+function order(words){
+  var newArr = words.split(' ')
+  var dict = {}
+  var retArr = []
+  var newStr = []
+  
+  for (word in newArr){
+    var wordy = newArr[word]
+    if (!dict[wordy]) dict[wordy] = ''
+    for (l in newArr[word]){
+      if (parseInt(newArr[word][l])>0){
+        dict[wordy] = parseInt(newArr[word][l]-1)
+          }
+        }
+      }
+  
+  for (pos in dict){
+    retArr.push([pos, dict[pos]])
+    retArr.sort(function(a,b){return a[1]-b[1]})  //this sorts the dict by the property values
+    }
+  
+  for (i in retArr){
+    newStr.push(retArr[i][0])
+    }
+
+  return newStr.join(' ')
+}
+
+
+
+//Replace With Alphabet Position (6 kyu)
+function alphabetPosition(text) {
+  var letters = text.toLowerCase().split('')
+  var newArr = []
+  var answer = []
+  var dict = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+    "d": 4,
+    "e": 5,
+    "f": 6,
+    "g": 7,
+    "h": 8,
+    "i": 9,
+    "j": 10,
+    "k": 11,
+    "l": 12,
+    "m": 13,
+    "n": 14,
+    "o": 15,
+    "p": 16,
+    "q": 17,
+    "r": 18,
+    "s": 19,
+    "t": 20,
+    "u": 21,
+    "v": 22,
+    "w": 23,
+    "x": 24,
+    "y": 25,
+    "z": 26
+  }
+  for (l in letters)
+    if (dict[letters[l]] !== undefined || dict[letters[l]] !== null){newArr.push(dict[letters[l]])}
+
+  for (i=0; i<newArr.length; i++){
+    if (newArr[i] !== undefined){answer.push(newArr[i])}
+  }
+  return answer.join(' ')
+}

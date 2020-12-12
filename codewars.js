@@ -1367,3 +1367,16 @@ function digPow(n, p){
 
   return Number.isInteger(tally/n) ? tally/n : -1
 }
+
+
+
+//Dubstep (6 kyu)
+function songDecoder(song){
+  var newSong = song.replace(/WUB/gi, ' ').trim()
+  var newSong = newSong.split(' ')
+  var newArr = []
+  
+  for (word in newSong)
+    newSong[word] === '' ? '' : newArr.push(newSong[word])
+  return newArr.join(' ')
+}

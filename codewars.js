@@ -1348,3 +1348,22 @@ function better(a){
   }
   return format
 }
+
+
+
+//Playing with digits (6 kyu)
+function digPow(n, p){
+  var newArr = n.toString().split('').map(Number)
+  var powers = []
+  var tally = 0
+
+  for (i=0; i<n.toString().length; i++){
+    powers.push(p+i)
+  }
+
+  for (j=0; j<newArr.length; j++){
+    tally += Math.pow(newArr[j],powers[j])
+  }
+
+  return Number.isInteger(tally/n) ? tally/n : -1
+}

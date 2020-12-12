@@ -1332,3 +1332,19 @@ function alphabetPosition(text) {
   }
   return answer.join(' ')
 }
+
+
+
+//Create Phone Number (6 kyu)
+function createPhoneNumber(n){
+  return `(${n[0]}${n[1]}${n[2]}) ${n[3]}${n[4]}${n[5]}-${n[6]}${n[7]}${n[8]}${n[9]}`  
+}
+
+//better one
+function better(a){
+  var format = '(xxx) xxx-xxxx'
+  for (i=0; i<a.length; i++){
+    format = format.replace('x', a[i])
+  }
+  return format
+}

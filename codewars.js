@@ -1410,3 +1410,19 @@ function iqTest(n){
   }
   return answer
 }
+
+
+
+
+//Unique In Order (6 kyu)
+var uniqueInOrder=function(iterable){
+  var newArr = []
+  var retArr = []
+  typeof iterable==='string' ? newArr = iterable.split('') : newArr = iterable
+
+  for(i=0; i<newArr.length; i++){
+    newArr[i] !== newArr[i+1] ? retArr.push(newArr[i]) : ''
+  }
+
+  return retArr
+}

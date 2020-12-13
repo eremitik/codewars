@@ -1380,3 +1380,33 @@ function songDecoder(song){
     newSong[word] === '' ? '' : newArr.push(newSong[word])
   return newArr.join(' ')
 }
+
+//better version
+function SongDecoder(song){
+  return song.replace(/(WUB)+/g, ' ').trim()
+}
+
+
+
+//IQ Test (6 kyu)
+function iqTest(n){
+  //put n into an array so easier to play with
+  var temp = n.toString().split(' ')
+  var newArr = []
+  for (num in temp){newArr.push(Number(temp[num]))}
+
+  //setup check if array has more even or odd numbers
+  var answer = 0
+  var odd = 0
+  var even = 0
+  for (value in newArr)
+    newArr[value]%2===0 ? even++ : odd++
+
+  //find the position of even number if array has more odd numbers, and visa-versa
+  if (even<odd) {
+    for (i=0; i<temp.length; i++){if (temp[i]%2===0){answer = i+1}}
+  } else {
+    for (i=0; i<temp.length; i++){if (temp[i]%2!==0){answer = i+1}}
+  }
+  return answer
+}

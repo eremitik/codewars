@@ -1463,3 +1463,16 @@ function findEvenIndex(arr){
   for (k=0; k<fArr.length; k++){fArr[k]===bArr[k] ? pos=k : ''}
   return pos>arr.length ? -1 : pos
 }
+
+
+
+Find the unique number (6 kyu)
+function findUniq(arr) {
+  var obj = {}
+  for (i=0, j=0; i<arr.length; i++){!obj[arr[i]] ? obj[arr[i]]=1 : obj[arr[i]]++}
+  
+  //very convoluted way to find the smaller value in the object
+  return Object.entries(obj)[1][1] < Object.entries(obj)[0][1] ? 
+                                Number(Object.entries(obj)[1][0]) : 
+                                Number(Object.entries(obj)[0][0])
+}

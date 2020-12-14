@@ -1426,3 +1426,16 @@ var uniqueInOrder=function(iterable){
 
   return retArr
 }
+
+
+
+//Build a pile of Cubes (6 kyu)
+function findNb(m) {
+    var count = 0
+    var tally = 0
+    for (i=1; i<Math.pow(m,1/4); i++){if (tally<m){tally+=i*i*i; count++}} 
+
+    var checker = 0
+    for (j=count; j>0; j--){checker+=j*j*j}
+    return m===checker ? count : -1
+}

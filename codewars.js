@@ -1439,3 +1439,27 @@ function findNb(m) {
     for (j=count; j>0; j--){checker+=j*j*j}
     return m===checker ? count : -1
 }
+
+
+
+//Equal Sides Of An Array (6 kyu)
+function findEvenIndex(arr){
+  var fArr = []
+  var bArr = []
+  var pos = arr.length + 1
+
+  var test = 0
+  for(i=0; i<arr.length; i++){
+    fArr.push(test+arr[i])
+    test=test+arr[i]
+  }
+
+  var testy = 0
+  for (j=arr.length-1; j>=0; j--){
+    bArr.unshift(testy+arr[j])
+    testy=testy+arr[j]
+  }
+
+  for (k=0; k<fArr.length; k++){fArr[k]===bArr[k] ? pos=k : ''}
+  return pos>arr.length ? -1 : pos
+}

@@ -1469,10 +1469,59 @@ function findEvenIndex(arr){
 Find the unique number (6 kyu)
 function findUniq(arr) {
   var obj = {}
-  for (i=0, j=0; i<arr.length; i++){!obj[arr[i]] ? obj[arr[i]]=1 : obj[arr[i]]++}
+  for (i=0; i<arr.length; i++){!obj[arr[i]] ? obj[arr[i]]=1 : obj[arr[i]]++}
   
   //very convoluted way to find the smaller value in the object
   return Object.entries(obj)[1][1] < Object.entries(obj)[0][1] ? 
                                 Number(Object.entries(obj)[1][0]) : 
                                 Number(Object.entries(obj)[0][0])
+}
+
+
+
+//Find the missing letter (6 kyu)
+function findMissingLetter(array){
+  var dict = {
+    "a": 1,
+    "b": 2,
+    "c": 3,
+    "d": 4,
+    "e": 5,
+    "f": 6,
+    "g": 7,
+    "h": 8,
+    "i": 9,
+    "j": 10,
+    "k": 11,
+    "l": 12,
+    "m": 13,
+    "n": 14,
+    "o": 15,
+    "p": 16,
+    "q": 17,
+    "r": 18,
+    "s": 19,
+    "t": 20,
+    "u": 21,
+    "v": 22,
+    "w": 23,
+    "x": 24,
+    "y": 25,
+    "z": 26
+  }
+
+  //convert alphabet to numerical position
+  var check = []
+  for (i=0; i<array.length; i++){check.push(dict[array[i].toLowerCase()])}
+
+  //check the non-sequential number in numerical position
+  var ans = 0
+  for (j=0; j<check.length-1; j++){check[j+1]===check[j]+1 ? '' : ans=check[j+1]-1}
+  
+  //match the letter to the corresponding non-sequential number
+  var letter = ''
+  for (let key in dict){dict[key]===ans ? letter=key : ''}
+ 
+  //return the non-sequential letter in upper or lower case form
+  return array[0]===array[0].toUpperCase() ? letter.toUpperCase() : letter.toLowerCase()
 }

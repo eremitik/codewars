@@ -1525,3 +1525,25 @@ function findMissingLetter(array){
   //return the non-sequential letter in upper or lower case form
   return array[0]===array[0].toUpperCase() ? letter.toUpperCase() : letter.toLowerCase()
 }
+//could have used '.charCodeAt()' method to shorten process.
+
+
+
+//Are they the "same"? (6 kyu)
+function comp(arr1, arr2){
+  arr1!==null ? arr1=arr1.sort((a,b)=>a-b) : ''
+  arr2!==null ? arr2=arr2.sort((a,b)=>a-b) : ''
+
+  var newArr = []
+  for (n in arr2){
+    newArr.push(Math.sqrt(arr2[n]))
+  }
+
+  var count = 0
+  for (i=0; i<newArr.length; i++){
+    arr1[i]===newArr[i] ? count++ : ''
+  }
+
+  return arr1===null || arr2===null ? false : 
+        count===arr2.length ? true : false
+}

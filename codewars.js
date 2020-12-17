@@ -1547,3 +1547,19 @@ function comp(arr1, arr2){
   return arr1===null || arr2===null ? false : 
         count===arr2.length ? true : false
 }
+
+
+
+//Format a string of names like 'Bart, Lisa & Maggie'. (6 kyu)
+function list(names){
+  var newArr = []
+  var newStr = ''
+  var front = ''
+  for (i=0; i<names.length; i++){newArr.push(names[i]['name'])}
+  for (j=0; j<newArr.length-2; j++){front += `${newArr[j]}, `} 
+  
+  return newArr.length===0 ? newStr :
+          newArr.length===1 ? newStr += newArr[0] :
+          newArr.length===2 ? newStr += `${newArr[0]} & ${newArr[1]}` : 
+          newArr.length > 2 ? `${front}${newArr[newArr.length-2]} & ${newArr[newArr.length-1]}` : ''
+}

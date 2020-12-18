@@ -1563,3 +1563,19 @@ function list(names){
           newArr.length===2 ? newStr += `${newArr[0]} & ${newArr[1]}` : 
           newArr.length > 2 ? `${front}${newArr[newArr.length-2]} & ${newArr[newArr.length-1]}` : ''
 }
+
+
+
+//Is a number prime? (6 kyu) - finally passed, adding sqrt to the arg loop worked.
+function isPrime(num) {
+  if (num<=1){
+    return false
+  } else {
+    for (var i=2; i<=Math.sqrt(num); i++){
+      if (num%i===0){
+        return false
+      }
+    }
+  }
+  return true
+}

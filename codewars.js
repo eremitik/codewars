@@ -1579,3 +1579,19 @@ function isPrime(num) {
   }
   return true
 }
+
+
+
+//Convert string to camel case (6 kyu)
+function toCamelCase(str){
+  let newVar = []
+  let newArr = []
+  str.split('-')[0]!==str ? newVar = str.split('-') : newVar = str.split('_')
+    newArr.push(newVar[0])
+  
+  for (i=1; i<newVar.length; i++){
+    newArr.push(newVar[i].charAt(0).toUpperCase()+newVar[i].slice(1))
+  }
+  
+  return newArr.join('')
+}

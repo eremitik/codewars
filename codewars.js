@@ -1595,3 +1595,41 @@ function toCamelCase(str){
   
   return newArr.join('')
 }
+
+
+
+//Split Strings (6 kyu)
+function solution(str){
+  var pairs = [];
+  if (str===''){
+    return []
+  } else {
+  var last = str.charAt(str.length-1) + '_'
+  }
+
+  for (i=0; i<str.length; i+=2){
+    pairs.push(str.substring(i,i+2))
+  }
+
+  if (pairs[pairs.length-1].length===1){
+    pairs.pop()
+    pairs.push(last)
+  }
+  return pairs
+}
+
+console.log(solution(''))
+
+
+
+//Does my number look big in this? (6 kyu)
+function narcissistic(value) {
+  var newArr = value.toString().split('')
+  var power = newArr.length
+  var newAns = []
+  for (i=0; i<newArr.length; i++){
+    newAns.push(Math.pow(newArr[i], power))
+  }
+  var newValue = newAns.reduce((a,b)=>a+b)
+  return newValue===value ? true : false
+}

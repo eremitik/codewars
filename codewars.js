@@ -1633,3 +1633,23 @@ function narcissistic(value) {
   var newValue = newAns.reduce((a,b)=>a+b)
   return newValue===value ? true : false
 }
+
+
+
+//Roman Numerals Decoder (6 kyu)
+function solution(roman){
+  let dict = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000
+  }
+  let newArr = roman.split('')
+  let sum = 0
+  for (i=0; i<newArr.length; i++){sum+=dict[newArr[i]]}
+  dict[newArr[newArr.length-2]]<dict[newArr[newArr.length-1]] ? sum-=(dict[newArr[newArr.length-2]]*2) : ''
+  return sum
+}

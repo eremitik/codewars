@@ -1653,3 +1653,16 @@ function solution(roman){
   dict[newArr[newArr.length-2]]<dict[newArr[newArr.length-1]] ? sum-=(dict[newArr[newArr.length-2]]*2) : ''
   return sum
 }
+
+
+
+//Two Sum (6 kyu)
+function twoSum(numbers, target) {
+  let newArr = []
+  for (i=0; i<numbers.length; i++){
+    for (j=i+1; j<numbers.length; j++){
+    numbers[i] + numbers[j] === target ? newArr.push(i, j) : ''
+    }
+  }
+  return newArr
+}

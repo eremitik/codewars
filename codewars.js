@@ -1666,3 +1666,63 @@ function twoSum(numbers, target) {
   }
   return newArr
 }
+
+
+
+//Decode the Morse code (6 kyu)
+decodeMorse = function(morseCode){
+  var morse = {
+  '.-': 'A',
+  '-...': 'B',
+  '-.-.': 'C',
+  '-..': 'D',
+  '.': 'E',
+  '..-.': 'F',
+  '--.': 'G',
+  '....': 'H',
+  '..': 'I',
+  '.---': 'J',
+  '-.-': 'K',
+  '.-..': 'L',
+  '--': 'M',
+  '-.': 'N',
+  '---': 'O',
+  '.--.': 'P',
+  '--.-': 'Q',
+  '.-.': 'R',
+  '...': 'S',
+  '-': 'T',
+  '..-': 'U',
+  '...-': 'V',
+  '.--': 'W',
+  '-..-': 'X',
+  '-.--': 'Y',
+  '--..': 'Z',
+  '   ': ' ',
+  '...---...': 'SOS',
+  '-.-.--': '!',
+  '.-.-.-': '.'
+
+  }
+  var newArr = morseCode.split(' ')
+  var word = []
+  for (i=0; i<newArr.length; i++){
+    morse[newArr[i]] === undefined ? word.push(' ') : word.push(morse[newArr[i]])
+  }
+  return word.join('').split('  ').join(' ').trim()
+}
+
+
+
+//Count characters in your string (6 kyu)
+function count (string) {  
+  let newObj = {}
+  for (i=0; i<string.length; i++){
+    if (newObj[string[i]]){
+      newObj[string[i]]++
+    } else {
+      newObj[string[i]] = 1
+    }
+  }
+  return newObj
+}

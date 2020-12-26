@@ -1726,3 +1726,24 @@ function count (string) {
   }
   return newObj
 }
+
+
+
+//Good vs Evil (6 kyu)
+function goodVsEvil(good, evil){
+  let goodV = [1, 2, 3, 3, 4, 10]
+  let evilV = [1, 2, 2, 2, 3, 5, 10]
+
+  let goodT = good.split(' ').map(Number)
+  let evilT = evil.split(' ').map(Number)
+
+  let goodP = 0
+  let evilP = 0
+
+  for (i=0; i<goodT.length; i++){goodP +=goodT[i]*goodV[i]}
+  for (j=0; j<evilT.length; j++){evilP +=evilT[j]*evilV[j]}
+
+  return  goodP>evilP ? 'Battle Result: Good triumphs over Evil' : 
+          goodP<evilP ? 'Battle Result: Evil eradicates all trace of Good' : 
+          goodP===evilP ? 'Battle Result: No victor on this battle field' : null
+}

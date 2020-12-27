@@ -1747,3 +1747,20 @@ function goodVsEvil(good, evil){
           goodP<evilP ? 'Battle Result: Evil eradicates all trace of Good' : 
           goodP===evilP ? 'Battle Result: No victor on this battle field' : null
 }
+
+
+
+//Length of missing array (6 kyu)
+function getLengthOfMissingArray(arr) {
+  if (arr === null  || arr.length === 0 || arr[1] === null || arr[0] === null){return 0} 
+
+  let newArr = []
+  for (i=0; i<arr.length; i++){newArr.push(arr[i].length)}
+  
+  let tot = 0
+  let max = Math.max(...newArr)
+  let min = Math.min(...newArr)
+  for (j=min; j<=max; j++){tot+=j}
+  
+  return Math.min(...newArr) ===0 ? 0 : tot - newArr.reduce((a,b)=>a+b)  
+}

@@ -1764,3 +1764,26 @@ function getLengthOfMissingArray(arr) {
   
   return Math.min(...newArr) ===0 ? 0 : tot - newArr.reduce((a,b)=>a+b)  
 }
+
+
+
+//Triple trouble (6 kyu)
+function tripledouble(num1, num2) {
+  let newArr1 = num1.toString().split('')
+  let check1 = []
+
+  let newArr2 = num2.toString().split('')
+  let check2 = []
+
+
+  for (i=0; i<newArr1.length; i++){
+    newArr1[i]===newArr1[i+1] && newArr1[i]===newArr1[i+2] ? check1.push(Number(newArr1[i])) : null
+  }
+
+  for (j=0; j<newArr2.length; j++){
+    newArr2[j]===newArr2[j+1] ? check2.push(Number(newArr2[j])) : null
+  }
+
+  let compare = check1.filter((number)=>check2.includes(number))
+  return compare[0] != undefined ? 1 : 0
+}

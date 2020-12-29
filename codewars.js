@@ -1787,3 +1787,28 @@ function tripledouble(num1, num2) {
   let compare = check1.filter((number)=>check2.includes(number))
   return compare[0] != undefined ? 1 : 0
 }
+
+
+
+//Valid Phone Number (6 kyu)
+function validPhoneNumber(phoneNumber){
+  let newArr = phoneNumber.split('')
+  let check = 0
+
+  newArr[0] === '(' ? check+=1 : null
+  newArr[1] >= 0    ? check+=1 : null
+  newArr[2] >= 0    ? check+=1 : null
+  newArr[3] >= 0    ? check+=1 : null
+  newArr[4] === ')' ? check+=1 : null
+  newArr[5] === ' ' ? check+=1 : null
+  newArr[6] >= 0    ? check+=1 : null
+  newArr[7] >= 0    ? check+=1 : null
+  newArr[8] >= 0    ? check+=1 : null
+  newArr[9] === '-' ? check+=1 : null
+  newArr[10] >= 0   ? check+=1 : null
+  newArr[11] >= 0   ? check+=1 : null
+  newArr[12] >= 0   ? check+=1 : null
+  newArr[13] >= 0   ? check+=1 : null
+
+  return newArr.length===14 ? (check===14 ? true : false) : false
+}

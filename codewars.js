@@ -1812,3 +1812,25 @@ function validPhoneNumber(phoneNumber){
 
   return newArr.length===14 ? (check===14 ? true : false) : false
 }
+
+
+
+//Count of positives / sum of negatives (8 kyu)
+function countPositivesSumNegatives(input) {
+  let count = 0
+  let negatives = 0
+  let answer = []
+
+  let positive = []
+  let negative = []
+
+
+  for (n in input){
+    input[n]<1 ? negative.push(input[n]) : count++
+  }
+
+  input===null || input[0]===undefined ? answer=[] : answer.push(count)
+  negative[0]===undefined ? null : answer.push(negative.reduce((a,b)=>a+b))
+
+  return answer
+}

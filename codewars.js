@@ -1834,3 +1834,57 @@ function countPositivesSumNegatives(input) {
 
   return answer
 }
+
+
+
+//New Cashier Does Not Know About Space or Shift (6 kyu)
+function getOrder(input) {
+
+  let newArr = []
+
+  dict = {
+    'bur': 'Burger',
+    'fri': 'Fries',
+    'chi': 'Chicken',
+    'piz': 'Pizza',
+    'san': 'Sandwich',
+    'oni': 'Onionrings',
+    'mil': 'Milkshake',
+    'cok': 'Coke'
+  }
+
+  order = {
+    'Burger': 0,
+    'Fries': 0,
+    'Chicken': 0,
+    'Pizza': 0,
+    'Sandwich': 0,
+    'Onionrings': 0,
+    'Milkshake': 0,
+    'Coke': 0
+  }
+
+  for (i=0; i<input.length-2; i++){
+    for (key in dict){
+    input[i]+input[i+1]+input[i+2]===key ? newArr.push(dict[key]) : null
+    }
+  }
+
+  for (k=0; k<newArr.length; k++){
+    order[newArr[k]] ? order[newArr[k]]++ : order[newArr[k]] = 1
+  }
+  
+  let str = (
+    'Burger '.repeat(order['Burger'])+
+    'Fries '.repeat(order['Fries'])+
+    'Chicken '.repeat(order['Chicken'])+
+    'Pizza '.repeat(order['Pizza'])+
+    'Sandwich '.repeat(order['Sandwich'])+
+    'Onionrings '.repeat(order['Onionrings'])+
+    'Milkshake '.repeat(order['Milkshake'])+
+    'Coke '.repeat(order['Coke'])
+    )
+
+  return str.trim()
+  
+}

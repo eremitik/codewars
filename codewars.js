@@ -1875,16 +1875,28 @@ function getOrder(input) {
   }
   
   let str = (
-    'Burger '.repeat(order['Burger'])+
-    'Fries '.repeat(order['Fries'])+
-    'Chicken '.repeat(order['Chicken'])+
-    'Pizza '.repeat(order['Pizza'])+
-    'Sandwich '.repeat(order['Sandwich'])+
-    'Onionrings '.repeat(order['Onionrings'])+
-    'Milkshake '.repeat(order['Milkshake'])+
-    'Coke '.repeat(order['Coke'])
+    'Burger '     .repeat(order['Burger'])+
+    'Fries '      .repeat(order['Fries'])+
+    'Chicken '    .repeat(order['Chicken'])+
+    'Pizza '      .repeat(order['Pizza'])+
+    'Sandwich '   .repeat(order['Sandwich'])+
+    'Onionrings ' .repeat(order['Onionrings'])+
+    'Milkshake '  .repeat(order['Milkshake'])+
+    'Coke '       .repeat(order['Coke'])
     )
 
   return str.trim()
   
+}
+
+
+
+//Data Reverse (6 kyu)
+function dataReverse(data) {
+  let d = data.join('')
+  let newArr = []
+  for (i=0; i<d.length; i+=8){
+    newArr.push(d.substring(i,i+8))
+  }
+  return newArr.reverse().join('').split('').map(j=>Number(j))
 }

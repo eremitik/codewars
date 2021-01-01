@@ -1900,3 +1900,37 @@ function dataReverse(data) {
   }
   return newArr.reverse().join('').split('').map(j=>Number(j))
 }
+
+
+
+//Multiplication Tables (6 kyu)
+function multiplicationTable(row,col){
+  let newArr = []
+  for (i=1; i<=row; i++){
+    for (j=1; j<=col; j++){
+        newArr.push(i*j)
+    }
+  }
+
+  let ansArr = []
+  let k=0
+  while (k<newArr.length){
+    ansArr.push(newArr.slice(k,k+=col))
+  }
+
+  return ansArr
+}
+
+
+
+//Multiplication table (6 kyu)
+multiplicationTable = function(size) {
+  let result = [];
+  for (i=0; i<size; i++) {
+    result[i] = [];
+    for (j=0; j<size; j++) {
+      result[i].push((i+1)*(j+1));
+    }
+  }
+  return result;
+}

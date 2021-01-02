@@ -1934,3 +1934,30 @@ multiplicationTable = function(size) {
   }
   return result;
 }
+
+
+
+//Coordinates Validator (6 kyu)
+function isValidCoordinates(coordinates){
+  let arr = coordinates.split(',')
+  let x = arr[0]
+  let y = arr[1]
+  let z = arr[2]
+  let count = 0
+
+  xLength = x.toString().length
+  for (i=0; i<xLength; i++){
+    x.toString().charAt(i) === 'e' ? count+=1 : null
+  }
+
+  yLength = y.toString().length
+  for (j=0; j<yLength; j++){
+    y.toString().charAt(j) === 'e' ? count+=1 : null
+  }
+
+  isNaN(x) || isNaN(y) ? count+=1 : null
+  Math.abs(x) >= 0 && Math.abs(x) <= 90 ? null : count+=1
+  Math.abs(y) >= 0 && Math.abs(y) <= 180 ? null : count+=1
+  z === undefined ? null : count+=1
+  return count>0 ? false : true
+}

@@ -1961,3 +1961,16 @@ function isValidCoordinates(coordinates){
   z === undefined ? null : count+=1
   return count>0 ? false : true
 }
+
+
+
+// Sum consecutives (6 kyu)
+function sumConsecutives(s) {
+  let result = []
+  let counter = 1;
+
+  for (i=0; i<s.length; i++){
+    s[i]===s[i+1] ? counter++ : (result.push(s[i]*counter), counter=1)
+  }
+  return result
+}

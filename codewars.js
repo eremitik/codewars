@@ -2012,3 +2012,18 @@ function isPangram(string){
   for (ltr in dict){dict[ltr]===0 ? count++ : null}
   return count>0 ? false : true
   }
+
+
+
+  //Build Tower (6 kyu)
+function towerBuilder(nFloors) {
+  let newArr = []
+  for (i=1; i<=nFloors; i++){
+    newArr.push(
+      " ".repeat(nFloors-i) + 
+      "*".repeat(i*2-1) + 
+      " ".repeat(nFloors-i)
+      )
+  }
+  return newArr
+}

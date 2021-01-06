@@ -2038,3 +2038,12 @@ function divisors(integer) {
   }
   return newArr[0] === undefined ? `${integer} is prime` : newArr
 };
+
+
+
+//Odd or Even? (7 kyu)
+function oddOrEven(array) {
+  let sum = 0
+  array.length === 0 ? null : sum = array.reduce((a,b)=>a+b)
+  return sum % 2 === 0 ? 'even' : 'odd'
+}

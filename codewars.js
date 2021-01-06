@@ -2027,3 +2027,14 @@ function towerBuilder(nFloors) {
   }
   return newArr
 }
+
+
+
+//Find the divisors! (8 kyu)
+function divisors(integer) {
+  let newArr = []
+  for (i=2; i<integer; i++){
+    integer % i === 0 ? newArr.push(i) : null
+  }
+  return newArr[0] === undefined ? `${integer} is prime` : newArr
+};

@@ -2065,3 +2065,10 @@ function mxdiflg(a1, a2) {
 
   return ans === -Infinity ? -1 : ans
 }
+
+
+
+//Beginner Series #1 School Paperwork (8 kyu)
+function paperwork(n, m) {
+  return n<0 || m<0 ? 0 : n*m
+}

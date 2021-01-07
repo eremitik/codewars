@@ -2047,3 +2047,21 @@ function oddOrEven(array) {
   array.length === 0 ? null : sum = array.reduce((a,b)=>a+b)
   return sum % 2 === 0 ? 'even' : 'odd'
 }
+
+
+
+//Maximum Length Difference (7 kyu)
+function mxdiflg(a1, a2) {
+  let arr1 = []
+  let arr2 = []
+
+  for (str in a1){arr1.push(a1[str].length)}
+  for (str in a2){arr2.push(a2[str].length)}
+
+  let max1 = Math.max(...arr1) - Math.min(...arr2)
+  let max2 = Math.max(...arr2) - Math.min(...arr1)
+
+  let ans = Math.max(max1, max2) 
+
+  return ans === -Infinity ? -1 : ans
+}

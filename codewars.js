@@ -2091,3 +2091,12 @@ function stray(n) {
   }
   return Number(ans)
 }
+
+
+
+//Sum of a sequence
+const sequenceSum = (b, e, s) => {
+  let sum = 0
+  for (i=b; i<=e; i+=s){sum += i}
+  return b>e ? 0 : sum
+};

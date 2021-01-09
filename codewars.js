@@ -2072,3 +2072,22 @@ function mxdiflg(a1, a2) {
 function paperwork(n, m) {
   return n<0 || m<0 ? 0 : n*m
 }
+
+
+
+//Find the stray number (7 kyu)
+function stray(n) {
+  let dict = {}
+  for (i=0; i<n.length; i++){
+    if (dict[n[i]]){
+      dict[n[i]]++
+    } else {
+      dict[n[i]] = 1
+    }
+  }
+  let ans = 0
+  for (val in dict){
+    dict[val] === 1 ? ans=val : null
+  }
+  return Number(ans)
+}

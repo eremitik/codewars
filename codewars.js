@@ -2094,9 +2094,18 @@ function stray(n) {
 
 
 
-//Sum of a sequence
+//Sum of a sequence (7 kyu)
 const sequenceSum = (b, e, s) => {
   let sum = 0
   for (i=b; i<=e; i+=s){sum += i}
   return b>e ? 0 : sum
 };
+
+
+
+//Fake Binary (8 kyu)
+function fakeBin(x){
+  let num = ''
+  for (n in x){Number(x[n])<5 ? num += 0 : num += 1}
+  return num
+}

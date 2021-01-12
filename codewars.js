@@ -2109,3 +2109,10 @@ function fakeBin(x){
   for (n in x){Number(x[n])<5 ? num += 0 : num += 1}
   return num
 }
+
+
+
+..Simple multiplication (8 kyu)
+function simpleMultiplication(n) {
+  return n%2===0 ? n*8 : n*9
+}

@@ -2116,3 +2116,10 @@ function fakeBin(x){
 function simpleMultiplication(n) {
   return n%2===0 ? n*8 : n*9
 }
+
+
+
+//Round up to the next multiple of 5 (7 kyu)
+function roundToNext5(n){
+  return n>0 ? Math.ceil(n/5)*5 : Math.floor(Math.abs(n/5))*-5
+}

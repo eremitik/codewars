@@ -2123,3 +2123,26 @@ function simpleMultiplication(n) {
 function roundToNext5(n){
   return n>0 ? Math.ceil(n/5)*5 : Math.floor(Math.abs(n/5))*-5
 }
+
+
+
+//Will you make it? (8 kyu)
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump <= mpg*fuelLeft
+};
+
+
+
+//Convert a string to an array (8 kyu)
+function stringToArray(string){
+  return string.split(' ')
+}
+
+
+
+//Double Char (8 kyu)
+function doubleChar(str) {
+  let newStr = ''
+  for (i=0; i<str.length; i++){newStr += (str[i]+str[i])}
+  return newStr
+}

@@ -2146,3 +2146,14 @@ function doubleChar(str) {
   for (i=0; i<str.length; i++){newStr += (str[i]+str[i])}
   return newStr
 }
+
+
+
+//Count the Monkeys! (8 kyu)
+function monkeyCount(n) {
+  let newArr = []
+  for (i=1; i<=n; i++){
+    newArr.push(i)
+  }
+  return newArr
+}

@@ -2178,3 +2178,15 @@ function sumMix(x){
   for (num in x){newArr.push(Number(x[num]))}
   return newArr.reduce((a,b)=>a+b)
 }
+
+
+
+//Total amount of points (8 kyu)
+function points(games) {
+  let count = 0
+  for (i=0; i<games.length; i++){
+    games[i].charAt(0)>games[i].charAt(2) ? count += 3 : 
+    games[i].charAt(0)<games[i].charAt(2) ? null : count += 1
+  }
+  return count
+}

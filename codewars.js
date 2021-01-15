@@ -2169,3 +2169,12 @@ function getGrade (s1, s2, s3) {
           grade >= 80 & grade < 90 ? 'B' :        
           grade >= 90 & grade <= 100 ? 'A' : null
 }
+
+
+
+//Sum Mixed Array (8 kyu)
+function sumMix(x){
+  let newArr = []
+  for (num in x){newArr.push(Number(x[num]))}
+  return newArr.reduce((a,b)=>a+b)
+}

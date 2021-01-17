@@ -2190,3 +2190,21 @@ function points(games) {
   }
   return count
 }
+
+
+
+//Sort the odd (6 kyu)
+function sortArray(array) {
+  let odd = []
+  let even = []
+  let ans = []
+  for (i=0; i<array.length; i++){
+    array[i]%2===0 ? even.push(array[i]) : odd.push(array[i])
+  }
+  odd.sort((a,b)=>a-b)
+
+  for (j=0; j<array.length; j++){
+    array[j]%2===0 ? ans.push(even.shift()) : ans.push(odd.shift())
+  }
+  return ans
+}

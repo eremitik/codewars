@@ -2215,3 +2215,17 @@ function sortArray(array) {
 function longest(s1, s2) {
   return s1.concat(s2).replace(/(.)(?=.*\1)/g,"").split('').sort().join('')
 }
+
+
+
+//Sum without highest and lowest number (8 kyu)
+function sumArray(array) {
+  if (array === null || array[0] === undefined || array.length === 1 || array.length === 2){
+    return 0
+  } else {
+  let newArr = array.sort((a,b)=>a-b)
+    newArr.pop()
+    newArr.shift()
+    return newArr.reduce((a,b)=>a+b)
+  }
+}

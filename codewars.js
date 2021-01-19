@@ -2245,3 +2245,12 @@ function check(a, x) {
   for (n in a){a[n]===x ? count++ : null}
   return count>0
 }
+
+
+
+// Find the smallest integer in the array (8 kyu)
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+    }
+}

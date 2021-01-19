@@ -2229,3 +2229,13 @@ function sumArray(array) {
     return newArr.reduce((a,b)=>a+b)
   }
 }
+
+
+
+//Beginner-Lost Without a Map (8 kyu)
+function maps(x){
+  return x.map((a)=>a*2)
+}
+
+
+

@@ -2239,3 +2239,9 @@ function maps(x){
 
 
 
+// You only need one - Beginner (8 kyu)
+function check(a, x) {
+  let count = 0
+  for (n in a){a[n]===x ? count++ : null}
+  return count>0
+}

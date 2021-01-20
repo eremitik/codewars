@@ -2271,3 +2271,13 @@ function find_average(array) {
 function bonusTime(salary, bonus) {
   return bonus ? `£${salary*10}` : `£${salary}`
 }
+
+
+// Rock Paper Scissors! (8 kyu)
+const rps = (p1, p2) => {
+  console.log(p1,p2)
+  return p1===p2 ? 'Draw!' : 
+        (p1[0]==='s' && p2[0]==='p') || 
+        (p1[0]==='p' && p2[0]==='r') || 
+         p1[0]==='r' && p2[0]==='s' ? 'Player 1 won!' : 'Player 2 won!'
+};

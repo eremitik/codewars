@@ -2254,3 +2254,14 @@ class SmallestIntegerFinder {
     return Math.min(...args)
     }
 }
+
+
+
+// Calculate average (8 kyu)
+function find_average(array) {
+  let sum = 0
+  for (n in array){
+    sum+=array[n]
+  }
+  return sum / array.length
+}

@@ -2265,3 +2265,9 @@ function find_average(array) {
   }
   return sum / array.length
 }
+
+
+// Do I get a bonus? (8 kyu)
+function bonusTime(salary, bonus) {
+  return bonus ? `£${salary*10}` : `£${salary}`
+}

@@ -2281,3 +2281,18 @@ const rps = (p1, p2) => {
         (p1[0]==='p' && p2[0]==='r') || 
          p1[0]==='r' && p2[0]==='s' ? 'Player 1 won!' : 'Player 2 won!'
 };
+
+
+
+// Count the smiley faces! (6 kyu)
+function countSmileys(arr) {
+  let count = 0
+  let dictArr = [':)',':-)',':~)',  ':D',':-D',':~D',  ';)', ';-)',';~)', ';D',';-D',';~D']
+  for (n in arr){
+    let control = arr[n]
+    for (i in dictArr){
+      control===dictArr[i] ? count++ : null
+    }
+  }
+  return count
+}

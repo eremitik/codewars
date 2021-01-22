@@ -2296,3 +2296,21 @@ function countSmileys(arr) {
   }
   return count
 }
+
+
+
+// Delete occurrences of an element if it occurs more than n times (6 kyu)
+function deleteNth(arr,n){
+  let dict = {}
+  let newArr = []
+  for (i=0; i<arr.length; i++){
+    if (!dict[arr[i]]){
+      dict[arr[i]] = 1
+      newArr.push(arr[i])
+    } else if (dict[arr[i]] && dict[arr[i]]<n){
+      dict[arr[i]] += 1
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}

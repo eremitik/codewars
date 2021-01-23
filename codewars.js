@@ -2332,3 +2332,15 @@ function bmi(weight, height) {
   let bmi = weight / height**2
   return bmi <= 18.5 ? 'Underweight' : bmi <= 25 ? 'Normal' : bmi <= 30 ? 'Overweight' : 'Obese'
 }
+
+
+
+// Smallest unused ID (8 kyu)
+function nextId(ids){
+  ids = ids.sort((a,b)=>a-b).filter((c,d)=>ids.indexOf(c)===d)
+  let ans = []
+  for (i=0; i<ids.length; i++){
+    ids[i] != i ? ans.push(i) : null
+  } 
+  return ans[0] === undefined ? ids[ids.length-1] + 1 : ans[0]
+}

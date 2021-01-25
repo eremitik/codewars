@@ -2344,3 +2344,14 @@ function nextId(ids){
   } 
   return ans[0] === undefined ? ids[ids.length-1] + 1 : ans[0]
 }
+
+
+
+// DNA to RNA Conversion (8 kyu)
+function DNAtoRNA(dna) {
+  let ans = ''
+  for (ltr in dna){
+    dna[ltr]==='T' ? ans += 'U' : ans += dna[ltr]
+  }
+  return ans
+}

@@ -2355,3 +2355,10 @@ function DNAtoRNA(dna) {
   }
   return ans
 }
+
+
+
+// Convert a Boolean to a String (8 kyu)
+function booleanToString(b){
+  return b===true ? 'true' : 'false'
+}

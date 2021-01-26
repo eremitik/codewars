@@ -2378,3 +2378,10 @@ function sum (numbers) {
   */
   
 };
+
+
+
+// How good are you really? (8 kyu)
+function betterThanAverage(cp, yp) {
+  return (cp.reduce((a,b)=>a+b)/cp.length)<yp
+}

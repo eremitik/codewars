@@ -2362,3 +2362,19 @@ function DNAtoRNA(dna) {
 function booleanToString(b){
   return b===true ? 'true' : 'false'
 }
+
+
+
+// Sum Numbers (8 kyu)
+function sum (numbers) {
+  let count = 0
+  for (let i=0; i<numbers.length; i++){
+    count += numbers[i]
+  }
+  return count
+  
+  /* reduce method
+  return numbers.reduce((a,b) => a+b)
+  */
+  
+};

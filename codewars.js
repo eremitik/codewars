@@ -2395,3 +2395,6 @@ function findDifference(a, b) {
   }
   return Math.abs(multiply(a) - multiply(b))
 }
+
+/* *** better version
+find_difference=(a, b)=>(c=(a,b)=>a*b,Math.abs(a.reduce(c) - b.reduce(c))) */

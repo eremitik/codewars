@@ -2385,3 +2385,13 @@ function sum (numbers) {
 function betterThanAverage(cp, yp) {
   return (cp.reduce((a,b)=>a+b)/cp.length)<yp
 }
+
+
+
+// Difference of Volumes of Cuboids (8 kyu)
+function findDifference(a, b) {
+  function multiply (c) {
+    return c.reduce((y,z)=>y*z)
+  }
+  return Math.abs(multiply(a) - multiply(b))
+}

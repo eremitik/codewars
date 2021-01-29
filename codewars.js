@@ -2398,3 +2398,14 @@ function findDifference(a, b) {
 
 /* *** better version
 find_difference=(a, b)=>(c=(a,b)=>a*b,Math.abs(a.reduce(c) - b.reduce(c))) */
+
+
+
+// All Star Code Challenge #18 (8 kyu)
+function strCount(str, letter){  
+  count = 0
+  for (i=0; i<str.length; i++){
+    str.charAt(i) === letter ? count ++ : null
+  }
+  return count
+}

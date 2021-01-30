@@ -2409,3 +2409,10 @@ function strCount(str, letter){
   }
   return count
 }
+
+
+
+// FIXME: Replace all dots (8 kyu)
+var replaceDots = function(str) {
+  return str.replace(/[.]/g, '-');
+}

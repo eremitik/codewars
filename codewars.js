@@ -2430,3 +2430,9 @@ const quarterOf = (month) => {
 // Super Duper Easy (8 kyu)
 problem = (x) => typeof(x)==='string' ? "Error" : x*50+6
 
+
+
+// Parse nice int from char problem (8 kyu)
+function getAge(inputString){
+  return Number(inputString.charAt(0))
+}

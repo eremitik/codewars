@@ -2436,3 +2436,9 @@ problem = (x) => typeof(x)==='string' ? "Error" : x*50+6
 function getAge(inputString){
   return Number(inputString.charAt(0))
 }
+  
+
+
+// Are arrow functions odd? (8 kyu)
+odds = (n) => n.filter(n => n%2);
+

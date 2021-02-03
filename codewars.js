@@ -2442,3 +2442,11 @@ function getAge(inputString){
 // Are arrow functions odd? (8 kyu)
 odds = (n) => n.filter(n => n%2);
 
+ 
+  
+// Aspect Ratio Cropping - Part 1 (8 kyu)
+  function aspectRatio(x,y){
+	return [Math.ceil(y*(16/9)), y]
+}
+
+

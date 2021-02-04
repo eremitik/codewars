@@ -2450,3 +2450,9 @@ odds = (n) => n.filter(n => n%2);
 }
 
 
+
+// Grasshopper-Basic Function Fever
+function addFive(num) {
+  var total = num + 5
+  return total
+}

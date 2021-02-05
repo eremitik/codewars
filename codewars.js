@@ -2456,3 +2456,11 @@ function addFive(num) {
   var total = num + 5
   return total
 }
+
+
+	
+// NBA full 48 minutes average (8 kyu)
+function pointsPer48(ppg, mpg) {
+  let x = Math.round((48/mpg*ppg)*10)/10
+  return x>0 ? x : 0
+}

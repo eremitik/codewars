@@ -2464,3 +2464,11 @@ function pointsPer48(ppg, mpg) {
   let x = Math.round((48/mpg*ppg)*10)/10
   return x>0 ? x : 0
 }
+
+
+
+// Find the position! (8 kyu)
+function position(letter){                                                      
+  let dict = "abcdefghijklmnopqrstuvwxyz".split('');
+  return `Position of alphabet: ${dict.indexOf(letter.toLowerCase())+1}`                                 
+}    

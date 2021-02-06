@@ -2472,3 +2472,10 @@ function position(letter){
   let dict = "abcdefghijklmnopqrstuvwxyz".split('');
   return `Position of alphabet: ${dict.indexOf(letter.toLowerCase())+1}`                                 
 }    
+
+	
+	
+// Simple Fun #1: Seats in Theater (8 kyu)
+function seatsInTheater(nCols, nRows, col, row) {                                 
+  return (nCols-col+1)*(nRows-row)                                            
+}

@@ -2479,3 +2479,9 @@ function position(letter){
 function seatsInTheater(nCols, nRows, col, row) {                                 
   return (nCols-col+1)*(nRows-row)                                            
 }
+
+	
+// MakeUpperCase (8 kyu)
+function makeUpperCase(str){
+  return str.toUpperCase()
+}

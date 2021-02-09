@@ -2485,3 +2485,14 @@ function seatsInTheater(nCols, nRows, col, row) {
 function makeUpperCase(str){
   return str.toUpperCase()
 }
+
+	
+// CSV representation of array (8 kyu)
+function toCsvText(array) {                                  
+    let test = ''                                            
+    for (let i=0; i<array.length; i++){                      
+        test += array[i] + (i===(array.length-1) ? '' : '\n')
+    }                                                        
+    return test                                              
+}                                                            
+	

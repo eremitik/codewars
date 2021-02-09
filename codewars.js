@@ -2487,6 +2487,7 @@ function makeUpperCase(str){
 }
 
 	
+	
 // CSV representation of array (8 kyu)
 function toCsvText(array) {                                  
     let test = ''                                            

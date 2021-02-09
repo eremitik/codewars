@@ -2496,4 +2496,6 @@ function toCsvText(array) {
     }                                                        
     return test                                              
 }                                                            
-	
+
+// one liner
+toCsvText = (array) => array.join('\n')

@@ -2499,3 +2499,12 @@ function toCsvText(array) {
 
 // one liner
 toCsvText = (array) => array.join('\n')
+
+	
+	
+// Sum of differences in array (8 kyu)
+function sumOfDifferences(arr){                 
+    let s = arr.sort((a,b)=>b-a)                
+    return arr.length>0 ? s[0]-s[s.length-1] : 0
+}                                               
+

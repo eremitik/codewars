@@ -2508,3 +2508,10 @@ function sumOfDifferences(arr){
     return arr.length>0 ? s[0]-s[s.length-1] : 0
 }                                               
 
+
+	
+// USD=>CNY
+function usdcny(usd) {                               
+    return `${(usd*6.75).toFixed(2)} Chinese Yuan`   
+}                                                    
+

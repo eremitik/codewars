@@ -2515,3 +2515,15 @@ function usdcny(usd) {
     return `${(usd*6.75).toFixed(2)} Chinese Yuan`   
 }                                                    
 
+
+
+// SpeedCode #2 - Array Madness
+function arrayMadness(a,b) {                      
+    let sumA = 0                                  
+    let sumB = 0                                  
+                                                  
+    for(let num in a){sumA += Math.pow(a[num],2)} 
+    for(let num in b){sumB += Math.pow(b[num],3)} 
+                                                  
+    return sumA>sumB                              
+}                                                 

@@ -2527,3 +2527,12 @@ function arrayMadness(a,b) {
                                                   
     return sumA>sumB                              
 }                                                 
+
+	
+
+// My head is at the wrong end! (8 kyu)
+function fixTheMeerkat(arr) {         
+    let newArr = []                   
+    newArr.push(arr[2],arr[1],arr[0]) 
+    return newArr                     
+}                                     

@@ -2536,3 +2536,14 @@ function fixTheMeerkat(arr) {
     newArr.push(arr[2],arr[1],arr[0]) 
     return newArr                     
 }                                     
+
+	
+	
+// Lario and Muigi Pipe Problem
+function pipeFix(n){                            
+    let newArr = []                             
+    for (let i = n[0]; i<+n[n.length-1]+1; i++){
+        newArr.push(i)                          
+    }                                           
+    return newArr                               
+}                                               

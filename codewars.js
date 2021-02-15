@@ -2546,4 +2546,15 @@ function pipeFix(n){
         newArr.push(i)                          
     }                                           
     return newArr                               
-}                                               
+}            
+	
+	
+
+// Drink about (8 kyu)
+function peopleWithAgeDrink(old){
+    return old<14 ? "drink toddy" :
+        14<=old && old<18 ? "drink coke" :
+        18<=old && old<21 ? "drink beer" :
+        21<=old ? "drink whisky" : ''
+}
+

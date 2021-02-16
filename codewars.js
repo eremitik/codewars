@@ -2558,3 +2558,7 @@ function peopleWithAgeDrink(old){
         21<=old ? "drink whisky" : ''
 }
 
+
+	
+// Function 3 - multiplying two numbers
+multiply = (x,y) => x*y

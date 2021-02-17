@@ -2562,3 +2562,10 @@ function peopleWithAgeDrink(old){
 	
 // Function 3 - multiplying two numbers
 multiply = (x,y) => x*y
+
+	
+	
+// Transportation on vacation (8 kyu)
+function rentalCarCost(d) {
+    return d>=7 ? d*40-50 : d>=3 ? d*40-20 : d*40
+}

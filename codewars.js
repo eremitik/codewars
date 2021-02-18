@@ -2569,3 +2569,8 @@ multiply = (x,y) => x*y
 function rentalCarCost(d) {
     return d>=7 ? d*40-50 : d>=3 ? d*40-20 : d*40
 }
+
+	
+	
+// Beginner - Reduce but Grow (8 kyu)
+const grow = x => x.reduce((a,b)=>a*b)

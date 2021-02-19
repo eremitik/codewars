@@ -2574,3 +2574,8 @@ function rentalCarCost(d) {
 	
 // Beginner - Reduce but Grow (8 kyu)
 const grow = x => x.reduce((a,b)=>a*b)
+
+
+
+// Sum The Strings (8 kyu)
+const sumStr = (a,b) => `${Number(a)+Number(b)}`

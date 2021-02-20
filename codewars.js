@@ -2579,3 +2579,13 @@ const grow = x => x.reduce((a,b)=>a*b)
 
 // Sum The Strings (8 kyu)
 const sumStr = (a,b) => `${Number(a)+Number(b)}`
+
+
+// Pre-FizzBuzz Workout #1 (8 kyu)
+function preFizz(n){
+    let newArr = []
+    for (let i=1; i<=n; i++){
+        newArr.push(i)
+    }
+    return newArr
+}

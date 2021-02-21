@@ -2589,3 +2589,8 @@ function preFizz(n){
     }
     return newArr
 }
+
+	
+
+// Grasshopper - Personalized Message (8 kyu)
+const greet = (name, owner) => name === owner ? `Hello boss` : `Hello guest`

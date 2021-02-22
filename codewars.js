@@ -2594,3 +2594,15 @@ function preFizz(n){
 
 // Grasshopper - Personalized Message (8 kyu)
 const greet = (name, owner) => name === owner ? `Hello boss` : `Hello guest`
+
+
+
+// Stringy Strings (8 kyu)
+function stringy(size) {
+    let str = ''
+    for(let i=0; i<size; i++){
+        i%2 === 0 ? (str += 1) : (str += 0)
+    }
+    return `${str}`
+}
+

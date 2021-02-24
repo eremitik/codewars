@@ -2612,3 +2612,8 @@ function stringy(size) {
 function solution(a, b){
     return a.length>b.length ? b+a+b : a+b+a
 }
+
+	
+
+// Take the Derivative (8 kyu)
+const derive = (c,e) => `${c*e}x^${e-1}`

@@ -2617,3 +2617,13 @@ function solution(a, b){
 
 // Take the Derivative (8 kyu)
 const derive = (c,e) => `${c*e}x^${e-1}`
+
+
+// Find the Difference in Age betwen Oldest and Youngest Family Members
+function differenceInAges(ages){
+    let newArr = []
+    let sorted = ages.sort((a,b)=>b-a)
+    newArr.push(sorted[sorted.length-1], sorted[0], sorted[0]-sorted[sorted.length-1])
+    return newArr
+}
+

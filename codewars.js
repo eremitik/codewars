@@ -2627,3 +2627,20 @@ function differenceInAges(ages){
     return newArr
 }
 
+
+
+// Consecutive strings (6 kyu)
+function longestConsec(strarr, k) {
+    let newArr = []
+    for (i=0; i<strarr.length; i++){
+        k<=0 ? newArr='' : newArr.push(strarr.slice(i, i+k).reduce((a,b)=>a+b))
+    }
+
+    let longest = 0
+    let word = ''
+    for (j=0; j<newArr.length; j++){
+        newArr[j].length > longest ? (word=newArr[j], longest=newArr[j].length) : null
+    }
+    return strarr.length<k || k<0 ? '' : word
+}
+

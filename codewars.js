@@ -2644,3 +2644,38 @@ function longestConsec(strarr, k) {
     return strarr.length<k || k<0 ? '' : word
 }
 
+
+	
+// Simple Encryption #1 - Alternating Split (6 kyu)
+function encrypt(text, n){
+    if(text===null){
+        return text
+    } else if(n>0){
+        let word1 = ''
+        let word2 = ''
+        for (let i=0; i<text.length; i++){
+            i%2===0 ? word2+=(text[i]) : word1+=(text[i])
+        }
+        let ans = word1+word2
+        return encrypt(ans, n-1)
+    } else if(n<=0){
+        return text
+    }
+}
+
+function decrypt(eText, n){
+    if(eText===null){
+        return eText
+    } else if(n>0){
+        let mid = eText.length/2
+        let word1 = eText.slice(0, mid).split('')
+        let word2 = eText.slice(mid).split('')
+        let ans = ''
+        for (let i=0; i<mid; i++){
+            ans+=(word2[i]?word2[i]:null)+(word1[i]?word1[i]:'')
+        }
+        return decrypt(ans,n-1)
+    } else if(n<=0){
+        return eText
+    }
+}

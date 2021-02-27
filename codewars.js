@@ -2679,3 +2679,16 @@ function decrypt(eText, n){
         return eText
     }
 }
+
+	
+	
+// Bouncing Balls (6 kyu)
+function bouncingBall(h,b,w){
+    console.log(h,b,w)
+    let obs = 1
+    let newH = h
+    for (i=0; i<h; i++){
+        newH*b>w ? (obs+=2,(newH = newH*b)) : null
+    }
+    return b===1 || (h*b)<w || (h===b && b===w) ? -1 : obs
+}

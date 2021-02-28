@@ -2692,3 +2692,15 @@ function bouncingBall(h,b,w){
     }
     return b===1 || (h*b)<w || (h===b && b===w) ? -1 : obs
 }
+
+	
+
+// Write Number in Expanded Form (6 kyu)
+function expandedForm(num){
+    let newArr = `${num}`.split('') 
+    let ansArr = []
+    for(let i=0; i<newArr.length; i++){
+        newArr[i]>0 ? ansArr.push(newArr[i]+(`0`.repeat(newArr.length-1-i))) : null
+    } 
+    return ansArr.join(' + ') 
+}

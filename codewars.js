@@ -2704,3 +2704,18 @@ function expandedForm(num){
     } 
     return ansArr.join(' + ') 
 }
+
+
+
+Make the Deadfish swim (6 kyu)
+function parse(data) {
+    let newArr = []
+    let ans = 0
+    for(let x in data){
+        data[x] === 'i' ? ans++ :
+        data[x] === 'd' ? ans-- :
+        data[x] === 's' ? ans=Math.pow(ans,2) :
+        data[x] === 'o' ? newArr.push(ans) : null
+    }
+    return newArr
+}

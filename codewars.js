@@ -2719,3 +2719,14 @@ function parse(data) {
     }
     return newArr
 }
+
+
+
+// Count by X (8 kyu)
+function countBy(x,n){
+    let newArr = []
+    for(let i=1; i<n+1; i++){
+        newArr.push(x*i)
+    }   
+    return newArr
+}   

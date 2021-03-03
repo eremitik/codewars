@@ -2737,9 +2737,9 @@ function countBy(x,n){
 const disemvowel = str => str.replace(/[aeiou]/gi,'')
 /*
 	/ - start regexp
-	[] - one of symbols
-	/ - parameters
-	g - global - replace all symbols, not first find
-	i - case ignore. With him A === a
+	[] - put conditional chars in here
+	/ - start params
+	g - global - replace all symbols, not just the first char
+	i - case insensitive
 */
 

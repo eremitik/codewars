@@ -2743,3 +2743,12 @@ const disemvowel = str => str.replace(/[aeiou]/gi,'')
 	i - case insensitive
 */
 
+
+// Number of People in the Bus (7 kyu)
+var number = function(busStops){
+    let sum = 0
+    for (let i=0; i<busStops.length; i++){
+        sum += (busStops[i][0] - busStops[i][1])
+    }
+    return sum
+}

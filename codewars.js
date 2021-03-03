@@ -2735,4 +2735,11 @@ function countBy(x,n){
 
 // Disemvowel Trolls (7 kyu)
 const disemvowel = str => str.replace(/[aeiou]/gi,'')
-//g is for global, meaning it iterates through all of (str), i is for case-insensitive
+/*
+	/ - start regexp
+	[] - one of symbols
+	/ - parameters
+	g - global - replace all symbols, not first find
+	i - case ignore. With him A === a
+*/
+

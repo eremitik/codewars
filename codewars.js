@@ -2752,3 +2752,8 @@ var number = function(busStops){
     }
     return sum
 }
+
+
+
+// Remove anchor from URL (7 kyu)
+const removeUrlAnchor = (url) => url.split('#').shift()

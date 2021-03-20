@@ -2757,3 +2757,14 @@ var number = function(busStops){
 
 // Remove anchor from URL (7 kyu)
 const removeUrlAnchor = (url) => url.split('#').shift()
+
+
+
+// Removing Elements (8 kyu)
+function removeEveryOther(arr){
+    let newArr = []
+    for (let i=0; i<arr.length; i+=2){
+        newArr.push(arr[i])
+    }
+    return newArr
+}

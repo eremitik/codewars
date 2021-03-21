@@ -2768,3 +2768,7 @@ function removeEveryOther(arr){
     }
     return newArr
 }
+
+
+// Opposites Attract (8 kyu)
+const lovefunc = (f1,f2) => (f1+f2)%2>0

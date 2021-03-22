@@ -2772,3 +2772,13 @@ function removeEveryOther(arr){
 
 // Opposites Attract (8 kyu)
 const lovefunc = (f1,f2) => (f1+f2)%2>0
+
+
+// What is between? (8 kyu)
+function between(a,b) {
+    let newArr = []
+    for (let i=a; i<=b; i++){
+        newArr.push(i)
+    }
+    return newArr
+}

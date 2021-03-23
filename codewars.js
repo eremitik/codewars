@@ -2782,3 +2782,7 @@ function between(a,b) {
     }
     return newArr
 }
+
+	
+// Get Nth Even Number (8 kyu)
+const nthEven = n => n*2-2

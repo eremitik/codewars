@@ -2786,3 +2786,19 @@ function between(a,b) {
 	
 // Get Nth Even Number (8 kyu)
 const nthEven = n => n*2-2
+
+
+// Squash the bugs (8 kyu)
+function findLongest(str){
+
+    let spl = str.split(' ')
+    let longest = 0
+
+    for (let i=0; i<spl.length; i++){
+        if(spl[i].length>longest){
+            longest = spl[i].length
+        }
+    }
+    return longest
+}
+

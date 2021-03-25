@@ -2802,3 +2802,17 @@ function findLongest(str){
     return longest
 }
 
+
+// Sort and Start (8 kyu)
+function twoSort(s) {
+    let sorted = s.sort()[0]
+    let word = ''
+    for (let i=0; i<sorted.length; i++){
+        if(i<sorted.length-1){
+        word += sorted.charAt(i) + '***'
+        } else if(i===sorted.length-1){
+            word += sorted.charAt(i)
+        }
+    }
+    return word
+}

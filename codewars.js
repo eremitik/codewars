@@ -2829,3 +2829,14 @@ function howManyDalmatians(number){
   dogs[2]
 
 }
+
+	
+// The Feast of Many Beasts (8 kyu)
+function feast(beast, dish){
+    let bFirst = beast.charAt(0)
+    let bLast = beast.charAt(beast.length-1)
+    let dFirst = dish.charAt(0)
+    let dLast = dish.charAt(dish.length-1)
+
+    return bFirst === dFirst && bLast === dLast
+}

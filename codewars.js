@@ -2840,3 +2840,7 @@ function feast(beast, dish){
 
     return bFirst === dFirst && bLast === dLast
 }
+
+	
+// Remove exclamation marks (8 kyu)
+const removeExclamationMarks = (s) => s.replace(/!/g,'')

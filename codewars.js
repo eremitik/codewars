@@ -2844,3 +2844,27 @@ function feast(beast, dish){
 	
 // Remove exclamation marks (8 kyu)
 const removeExclamationMarks = (s) => s.replace(/!/g,'')
+
+
+// Cat years, Dog years (8 kyu)
+var humanYearsCatYearsDogYears = function(humanYears) {
+    let cat = 0
+    let dog = 0
+    
+    humanYears >= 2 ? (cat += 24, dog += 24) :
+    humanYears === 1 ? (cat += 15, dog += 15) : null
+
+    const calculate = (n, yrs) => {
+        let sum = 0
+        for (let i=n-2; i>0; i--){
+            sum += yrs
+        }
+        return sum
+    }
+    
+    cat += calculate(humanYears, 4)
+    dog += calculate(humanYears, 5)
+  
+    return [humanYears, cat, dog]
+
+}

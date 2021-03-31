@@ -2868,3 +2868,8 @@ var humanYearsCatYearsDogYears = function(humanYears) {
     return [humanYears, cat, dog]
 
 }
+
+
+// Template Strings (8 kyu)
+const TempleStrings = (obj, feature) => obj + ' are ' + feature
+

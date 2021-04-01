@@ -2873,3 +2873,6 @@ var humanYearsCatYearsDogYears = function(humanYears) {
 // Template Strings (8 kyu)
 const TempleStrings = (obj, feature) => obj + ' are ' + feature
 
+
+// The Wide-Mouthed frog! (8 kyu)
+const mouthSize = (animal) => animal.toLowerCase() === "alligator" ? "small" : "wide"

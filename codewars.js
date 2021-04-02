@@ -2876,3 +2876,7 @@ const TempleStrings = (obj, feature) => obj + ' are ' + feature
 
 // The Wide-Mouthed frog! (8 kyu)
 const mouthSize = (animal) => animal.toLowerCase() === "alligator" ? "small" : "wide"
+
+
+// Miles per gallon to kilometers per liter (8 kyu)
+const converter = (mpg) => Math.round(mpg/(4.54609188/1.609344) * 100) / 100

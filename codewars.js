@@ -2880,3 +2880,7 @@ const mouthSize = (animal) => animal.toLowerCase() === "alligator" ? "small" : "
 
 // Miles per gallon to kilometers per liter (8 kyu)
 const converter = (mpg) => Math.round(mpg/(4.54609188/1.609344) * 100) / 100
+
+
+// Keep up the hoop (8 kyu)
+const hoopCount = (n) => n>=10 ? "Great, now move on to tricks" : "Keep at it until you get it"

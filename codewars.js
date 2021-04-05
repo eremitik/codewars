@@ -2884,3 +2884,11 @@ const converter = (mpg) => Math.round(mpg/(4.54609188/1.609344) * 100) / 100
 
 // Keep up the hoop (8 kyu)
 const hoopCount = (n) => n>=10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+
+
+// Volume of a Cuboid (8 kyu)
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length*width*height
+  }
+}

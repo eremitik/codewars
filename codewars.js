@@ -2892,3 +2892,7 @@ class Kata {
     return length*width*height
   }
 }
+
+
+// Holiday VIII - Duty Free (8 kyu)
+const dutyFree = (normPrice, discount, hol) => Math.floor(hol/(normPrice*discount/100))

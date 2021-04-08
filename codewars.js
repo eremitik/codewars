@@ -2896,3 +2896,7 @@ class Kata {
 
 // Holiday VIII - Duty Free (8 kyu)
 const dutyFree = (normPrice, discount, hol) => Math.floor(hol/(normPrice*discount/100))
+
+
+// Grasshopper - Terminal game move function (8 kyu)
+const move = (p, r) => p+r*2

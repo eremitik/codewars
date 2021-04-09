@@ -2900,3 +2900,7 @@ const dutyFree = (normPrice, discount, hol) => Math.floor(hol/(normPrice*discoun
 
 // Grasshopper - Terminal game move function (8 kyu)
 const move = (p, r) => p+r*2
+
+
+// Cound Odd Numbers below n (8 kyu)
+const oddCount = (n) => Math.floor(n/2)

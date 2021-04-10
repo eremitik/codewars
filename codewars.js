@@ -2904,3 +2904,17 @@ const move = (p, r) => p+r*2
 
 // Cound Odd Numbers below n (8 kyu)
 const oddCount = (n) => Math.floor(n/2)
+
+
+// Drone Fly-By (8 kyu)
+function flyBy(lamps, drone){
+    let res = ''
+    if (drone.length>lamps.length){
+        res += 'o'.repeat(drone.length-1)
+        return res
+    } else {
+        res +=  'o'.repeat(drone.length)
+        res +=  'x'.repeat(lamps.length-drone.length)
+        return drone.length>drone.length ? null : res
+    }
+}

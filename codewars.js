@@ -2918,3 +2918,13 @@ function flyBy(lamps, drone){
         return drone.length>drone.length ? null : res
     }
 }
+
+
+// Powers of 2 (8 kyu)
+function powersOfTwo(n) {
+    let arr = []
+    for (let i=0; i<n+1; i++){
+        arr.push(Math.pow(2,i))
+    }
+    return arr
+}

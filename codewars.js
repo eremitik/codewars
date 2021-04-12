@@ -2928,3 +2928,7 @@ function powersOfTwo(n) {
     }
     return arr
 }
+
+	
+// Thinkful - Logic Drills: Traffic light (8 kyu)
+const updateLight = (curr) => curr === "green" ? "yellow" : curr === "yellow" ? "red" : "green"

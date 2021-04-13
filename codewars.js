@@ -2932,3 +2932,7 @@ function powersOfTwo(n) {
 	
 // Thinkful - Logic Drills: Traffic light (8 kyu)
 const updateLight = (curr) => curr === "green" ? "yellow" : curr === "yellow" ? "red" : "green"
+
+
+// Is this my tail? (8 kyu)
+const correctTail = (b,t) => b.charAt(b.length-1) === t

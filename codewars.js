@@ -2936,3 +2936,13 @@ const updateLight = (curr) => curr === "green" ? "yellow" : curr === "yellow" ? 
 
 // Is this my tail? (8 kyu)
 const correctTail = (b,t) => b.charAt(b.length-1) === t
+
+
+// To square(root) or not to square(root) (8 kyu)
+function squareOrSquareRoot(array){
+    let newArr = []
+    for (let i=0; i<array.length; i++){
+        Number.isInteger(Math.sqrt(array[i])) ? newArr.push(Math.sqrt(array[i])) : newArr.push(Math.pow(array[i],2))
+    }
+    return newArr
+}

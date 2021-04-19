@@ -2946,3 +2946,7 @@ function squareOrSquareRoot(array){
     }
     return newArr
 }
+
+	
+// Sentence Smash (8 kyu)
+const smash = (words) => words.join(' ')

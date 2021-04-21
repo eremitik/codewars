@@ -2950,3 +2950,7 @@ function squareOrSquareRoot(array){
 	
 // Sentence Smash (8 kyu)
 const smash = (words) => words.join(' ')
+
+
+// Enumerable Magic #25 - Take the First N Elements (8 kyu)
+const take = (arr, n) => arr.slice(0,n)

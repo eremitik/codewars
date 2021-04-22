@@ -2954,3 +2954,7 @@ const smash = (words) => words.join(' ')
 
 // Enumerable Magic #25 - Take the First N Elements (8 kyu)
 const take = (arr, n) => arr.slice(0,n)
+
+
+// Third Angle of a Triangle (8 kyu)
+const otherAngle = (a, b) => 180-a-b

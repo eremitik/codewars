@@ -2958,3 +2958,7 @@ const take = (arr, n) => arr.slice(0,n)
 
 // Third Angle of a Triangle (8 kyu)
 const otherAngle = (a, b) => 180-a-b
+
+
+// Reverse List Order (8 kyu)
+const reverseList = (list) => list.reverse()

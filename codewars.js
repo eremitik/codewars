@@ -2962,3 +2962,7 @@ const otherAngle = (a, b) => 180-a-b
 
 // Reverse List Order (8 kyu)
 const reverseList = (list) => list.reverse()
+
+
+// Twice as old (8 kyu)
+const twiceAsOld = (d, s) => Math.abs(d-s*2)

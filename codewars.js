@@ -2966,3 +2966,13 @@ const reverseList = (list) => list.reverse()
 
 // Twice as old (8 kyu)
 const twiceAsOld = (d, s) => Math.abs(d-s*2)
+
+
+// Expressions Matter (8 kyu)
+function expressionMatter(a,b,c) {
+    let sum = a+b+c
+    let mult = a*b*c
+    let one = a*(b+c)
+    let sec = (a+b)*c
+    return Math.max(sum, mult, one, sec)
+}   

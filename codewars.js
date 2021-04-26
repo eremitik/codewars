@@ -2976,3 +2976,7 @@ function expressionMatter(a,b,c) {
     let sec = (a+b)*c
     return Math.max(sum, mult, one, sec)
 }   
+
+
+// How many lightsabers do you own? (8 kyu)
+const howManyLightsabersDoYouOwn = (name) => name==="Zach" ? 18 : 0

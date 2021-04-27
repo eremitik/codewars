@@ -2980,3 +2980,9 @@ function expressionMatter(a,b,c) {
 
 // How many lightsabers do you own? (8 kyu)
 const howManyLightsabersDoYouOwn = (name) => name==="Zach" ? 18 : 0
+
+
+// Basic variable assignment (8 kyu)
+var a = "code";
+var b = "wa.rs";
+var name = a + b;

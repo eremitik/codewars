@@ -2986,3 +2986,13 @@ const howManyLightsabersDoYouOwn = (name) => name==="Zach" ? 18 : 0
 var a = "code";
 var b = "wa.rs";
 var name = a + b;
+
+	
+// Multiple of Index (8 kyu)
+function multipleOfIndex(arr){
+    let newArr = []
+    for (let i=0; i<arr.length; i++){
+        arr[i]%i === 0 ? newArr.push(arr[i]) : null
+    }
+    return newArr
+}   

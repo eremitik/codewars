@@ -2995,4 +2995,8 @@ function multipleOfIndex(arr){
         arr[i]%i === 0 ? newArr.push(arr[i]) : null
     }
     return newArr
-}   
+}
+	
+
+// Watermelon (8 kyu)
+const divide = (weight) => weight===2 ? false : (weight-2)%2 === 0

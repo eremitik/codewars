@@ -3000,3 +3000,7 @@ function multipleOfIndex(arr){
 
 // Watermelon (8 kyu)
 const divide = (weight) => weight===2 ? false : (weight-2)%2 === 0
+
+
+// Grasshopper - Messi goals function (8 kyu)
+const goals = (llg, cdg, clg) => llg+cdg+clg

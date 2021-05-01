@@ -3004,3 +3004,10 @@ const divide = (weight) => weight===2 ? false : (weight-2)%2 === 0
 
 // Grasshopper - Messi goals function (8 kyu)
 const goals = (llg, cdg, clg) => llg+cdg+clg
+
+
+// Get Planet Name By ID (8 kyu)
+function getPlanetName(id){
+  let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+  return planets[id-1]
+}

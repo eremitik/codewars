@@ -3011,3 +3011,14 @@ function getPlanetName(id){
   let planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
   return planets[id-1]
 }
+
+
+// Reversing Words in a String (8 kyu)
+function reverse(str){
+    let newArr = str.split(' ')
+    let revArr = []
+    for (let i=newArr.length-1; i>=0; i--){
+        revArr.push(newArr[i])
+    }
+    return revArr.join(' ')
+}

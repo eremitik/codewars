@@ -3022,3 +3022,13 @@ function reverse(str){
     }
     return revArr.join(' ')
 }
+
+	
+// Unfinished Loop - Bug Fixing #1 (8 kyu)
+function createArray(num){
+    let newArr = [];
+    for (let i=1; i<num+1; i++){
+        newArr.push(i)
+    }
+    return newArr
+}

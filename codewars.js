@@ -3032,3 +3032,7 @@ function createArray(num){
     }
     return newArr
 }
+
+
+// Is it event (8 kyu)
+const testEven = (n) => n%2 === 0

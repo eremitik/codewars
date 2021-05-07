@@ -3036,3 +3036,17 @@ function createArray(num){
 
 // Is it event (8 kyu)
 const testEven = (n) => n%2 === 0
+
+
+// Well of Ideas - Easy Version (8 kyu)
+function well(x) {
+  let countGood = 0
+  let countBad = 0
+  for (let i=0; i<x.length; i++){
+    x[i] === 'good' ? countGood++ :
+      x[i] === 'bad' ? countBad++ : null
+  }
+  return countGood === 0 ? 'Fail!' :
+    countGood === 1 || countGood === 2 ? 'Publish!' :
+    countGood >= 3 ? 'I smell a series!' : null
+}

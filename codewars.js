@@ -3050,3 +3050,11 @@ function well(x) {
     countGood === 1 || countGood === 2 ? 'Publish!' :
     countGood >= 3 ? 'I smell a series!' : null
 }
+
+	
+// What's the real floor? (8 kyu)
+function getRealFloor(n) {
+  return n<=0 ? n :
+    n<13 ? n-1 :
+    n>13 ? n-2 : null
+}

@@ -3058,3 +3058,7 @@ function getRealFloor(n) {
     n<13 ? n-1 :
     n>13 ? n-2 : null
 }
+
+	
+// Grasshopper - Array Mean (8 kyu)
+const findAverage = (n) => n.reduce((a,b) => a+b)/n.length

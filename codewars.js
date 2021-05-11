@@ -3066,3 +3066,22 @@ const findAverage = (n) => n.reduce((a,b) => a+b)/n.length
 
 // 5 without numbers (8 kyu)
 const unusualFive = () => "fivey".length
+
+
+// String repeat (8 kyu)
+pragma solidity ^0.4.19;
+
+contract Repeater {
+    function multiply(uint8 repeat, string pattern) view public returns (string) {
+        uint pattern_length = bytes(pattern).length;
+        bytes memory result = new bytes(pattern_length * repeat);
+        
+        for (uint i=0; i<pattern_length*repeat; i++) {
+            result[i] = bytes(pattern)[i % pattern_length];
+        }
+        
+        return string(result);
+    }
+}
+	
+	

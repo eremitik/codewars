@@ -3085,3 +3085,12 @@ contract Repeater {
 }
 	
 	
+// Regex validate PIN code (7 kyu)
+function validatePIN (pin) {
+  let pinArr = pin.split('')
+  let check = 0
+  for (let j=0; j<pinArr.length; j++){
+    (pinArr[j] >= '0' && pinArr[j] <= '9') ? null : check++
+  }
+  return (pinArr.length == 4 || pinArr.length == 6) && check == 0
+}

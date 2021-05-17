@@ -3094,3 +3094,7 @@ function validatePIN (pin) {
   }
   return (pinArr.length == 4 || pinArr.length == 6) && check == 0
 }
+
+
+// Dollars and Cents (8 kyu)
+const formatMoney = (amt) => `$${amt.toFixed(2)}`

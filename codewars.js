@@ -3098,3 +3098,13 @@ function validatePIN (pin) {
 
 // Dollars and Cents (8 kyu)
 const formatMoney = (amt) => `$${amt.toFixed(2)}`
+
+
+// Don't give me five! (7 kyu) 
+function dontGiveMeFive (s, e) {
+     let newArr = []
+     for (let i=s; i<=e; i++) {
+       i.toString().slice(-1) == 5 || i == 5 || i.toString().charAt(0) == 5 ? null : newArr.push(i)
+     }
+     return newArr.length
+   } 

@@ -3108,3 +3108,19 @@ function dontGiveMeFive (s, e) {
      }
      return newArr.length
    } 
+
+
+// If you can't sleep, just count sheep!! (8 kyu)
+// practicing recursion
+const countSheep = (num) => {
+  let ans = []
+  generate = (n) => {
+    ans.unshift(n + " sheep...")
+    n != 1 ? generate(n-1) : null
+  }
+  generate(num)
+  return ans.join('')
+}
+// simpler way is:
+const countSheep = (n) => [...Array(n)].map((_,i) => `${i+1} sheep...`).join('')
+

@@ -3124,3 +3124,6 @@ const countSheep = (num) => {
 // simpler way is:
 const countSheep = (n) => [...Array(n)].map((_,i) => `${i+1} sheep...`).join('')
 
+
+// Alan Partridge II - Apple Turnover (8 kyu)
+const apple = x => x*x>1000 ? "It's hotter than the sun!!" : "Help yourself to a honeycomb Yorkie for the glovebox."

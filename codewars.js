@@ -3131,3 +3131,7 @@ const apple = x => x*x>1000 ? "It's hotter than the sun!!" : "Help yourself to a
 
 // Reverse words (7 kyu)
 const reverseWords = (str) => str.split(" ").map(word => word.split('').reverse().join('')).join(' ')
+
+
+// All Star Code Challenge #1 (7 kyu)
+const sumPPG = (p1, p2) => p1.ppg + p2.ppg

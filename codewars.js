@@ -3135,3 +3135,7 @@ const reverseWords = (str) => str.split(" ").map(word => word.split('').reverse(
 
 // All Star Code Challenge #1 (7 kyu)
 const sumPPG = (p1, p2) => p1.ppg + p2.ppg
+
+
+// Ones and Zeros (7 kyu)
+const binaryArrayToNumber = arr => arr.reverse().map((x,i) => x === 1 ? Math.pow(2, i) : 0).reduce((a,b) => a+b)

@@ -3139,3 +3139,13 @@ const sumPPG = (p1, p2) => p1.ppg + p2.ppg
 
 // Ones and Zeros (7 kyu)
 const binaryArrayToNumber = arr => arr.reverse().map((x,i) => x === 1 ? Math.pow(2, i) : 0).reduce((a,b) => a+b)
+
+
+// Sum of the first nth term of Series (7 kyu)
+function SeriesSum(n) {
+  let newArr = [1]
+  for (let i=1; i<n; i++) {
+    newArr.push(1/(i*3+1))
+  }
+  return n===0 ? '0.00' : newArr.reduce((a,b)=>a+b).toFixed(2)
+}

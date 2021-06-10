@@ -3149,3 +3149,7 @@ function SeriesSum(n) {
   }
   return n===0 ? '0.00' : newArr.reduce((a,b)=>a+b).toFixed(2)
 }
+
+	
+// String ends with? (7 kyu)
+const solution = (str, ending) => ending === (str.slice(str.length - ending.length))

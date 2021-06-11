@@ -3153,3 +3153,7 @@ function SeriesSum(n) {
 	
 // String ends with? (7 kyu)
 const solution = (str, ending) => ending === (str.slice(str.length - ending.length))
+
+
+// Bit Counting (6 kyu)
+const countBits = n => n.toString(2).split('').map(num => Number(num)).reduce((a,b)=>a+b)

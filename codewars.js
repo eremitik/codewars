@@ -3161,3 +3161,7 @@ const countBits = n => n.toString(2).split('').map(num => Number(num)).reduce((a
 
 // Returning Strings (8kyu) - SQL
 SELECT CONCAT('Hello, ', name, ' how are you doing today?') AS greeting FROM person
+
+
+// Keep Hydrated! (8 kyu) - SQL
+SELECT id, hours, FLOOR(hours * 0.5) AS liters FROM cycling

@@ -3157,3 +3157,7 @@ const solution = (str, ending) => ending === (str.slice(str.length - ending.leng
 
 // Bit Counting (6 kyu)
 const countBits = n => n.toString(2).split('').map(num => Number(num)).reduce((a,b)=>a+b)
+
+
+// Returning Strings (8kyu) - SQL
+SELECT CONCAT('Hello, ', name, ' how are you doing today?') AS greeting FROM person
